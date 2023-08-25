@@ -70,11 +70,11 @@ namespace Pishtazan.Salaries.Domain.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Salary doesn&apos;t exist.
+        ///   Looks up a localized string similar to There is no salary in specified month.
         /// </summary>
-        internal static string SalaryNotFoundError {
+        internal static string SalaryInSameMonthNotFoundError {
             get {
-                return ResourceManager.GetString("SalaryNotFoundError", resourceCulture);
+                return ResourceManager.GetString("SalaryInSameMonthNotFoundError", resourceCulture);
             }
         }
     }

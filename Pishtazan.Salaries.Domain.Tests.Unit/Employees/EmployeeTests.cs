@@ -120,7 +120,7 @@ namespace Pishtazan.Salaries.Domain.Tests.Unit.Employees
         [InlineData("14000301", "14000231")]
         [InlineData("13990402", "13990530")]
         [InlineData("14021112", "14021201")]
-        public void UpdateIncome_WhenIncomeInSameMonthNotExists_ThrowsSalaryNotFoundException(string date1, string date2)
+        public void UpdateIncome_WhenIncomeInSameMonthNotExists_ThrowsSalaryInSameMonthNotFoundException(string date1, string date2)
         {
             // Arrange
             List<IncomeDetail> incomes = new List<IncomeDetail>()
@@ -133,7 +133,7 @@ namespace Pishtazan.Salaries.Domain.Tests.Unit.Employees
             var e = Record.Exception(() => employee.UpdateIncome(Date.FromString(date2), salaryDetail, incomeCal, overTimeCal));
 
             // Assert
-            Assert.IsType<SalaryNotFoundException>(e);
+            Assert.IsType<SalaryInSameMonthNotFoundException>(e);
         }
 
         [Theory]

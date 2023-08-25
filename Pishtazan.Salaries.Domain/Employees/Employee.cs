@@ -66,7 +66,7 @@ namespace Pishtazan.Salaries.Domain.Employees
             IncomeDetail? incomeInSameMonth = findIncomeInSameMonthWith(date);
 
             if (incomeInSameMonth == null)
-                throw new SalaryNotFoundException();
+                throw new SalaryInSameMonthNotFoundException();
 
             _incomes.Remove(incomeInSameMonth);
 

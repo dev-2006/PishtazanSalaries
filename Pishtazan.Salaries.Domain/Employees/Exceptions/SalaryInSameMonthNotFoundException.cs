@@ -5,9 +5,9 @@ using System.Runtime.Serialization;
 namespace Pishtazan.Salaries.Domain.Employees.Exceptions
 {
     [Serializable]
-    public class SalaryNotFoundException : DomainException
+    public class SalaryInSameMonthNotFoundException : DomainException
     {
-        public SalaryNotFoundException() : base(ErrorMessageResource.SalaryNotFoundError)
+        public SalaryInSameMonthNotFoundException() : base(ErrorMessageResource.SalaryInSameMonthNotFoundError)
         {
         }
     }

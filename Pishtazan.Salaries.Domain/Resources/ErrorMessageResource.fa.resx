@@ -120,7 +120,7 @@
   <data name="DuplicateSalariesInSameMonthError" xml:space="preserve">
     <value>در هر ماه تنها یک حقوق می توان تعریف کرد</value>
   </data>
-  <data name="SalaryNotFoundError" xml:space="preserve">
-    <value>حقوق وجود ندارد</value>
+  <data name="SalaryInSameMonthNotFoundError" xml:space="preserve">
+    <value>حقوقی در ماه تعیین شده وجود ندارد</value>
   </data>
 </root>
