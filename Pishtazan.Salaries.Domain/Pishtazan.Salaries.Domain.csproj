@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Pishtazan.Salaries.Infrastructure\Pishtazan.Salaries.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Pishtazan.Salaries.Domain\Pishtazan.Salaries.Domain.csproj" />
+    <ProjectReference Include="..\Pishtazan.Salaries.Infrastructure\Pishtazan.Salaries.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

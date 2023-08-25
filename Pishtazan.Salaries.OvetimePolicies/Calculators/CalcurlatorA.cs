@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static Pishtazan.Salaries.Infrastructure.Validation.Validate;
 
 namespace Pishtazan.Salaries.OvetimePolicies.Calculators
 {
@@ -11,8 +12,8 @@ namespace Pishtazan.Salaries.OvetimePolicies.Calculators
     {
         public Salary Calculate(BasicSalary basicSalary, Allowance allowance)
         {
-            ArgumentNullException.ThrowIfNull(basicSalary, nameof(basicSalary));
-            ArgumentNullException.ThrowIfNull(allowance, nameof(allowance));
+            ArgumentNotNull(basicSalary, nameof(basicSalary));
+            ArgumentNotNull(allowance, nameof(allowance));
 
             return basicSalary + allowance;
         }

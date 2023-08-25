@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Pishtazan.Salaries.Domain.Common;
+using static Pishtazan.Salaries.Infrastructure.Validation.Validate;
 
 namespace Pishtazan.Salaries.Domain.Employees
 {
@@ -14,9 +15,7 @@ namespace Pishtazan.Salaries.Domain.Employees
 
         public Name(string value) : base(value)
         {
-            ArgumentNullException.ThrowIfNull(value, "value");
-
-            value = value.Trim();
+            value = ArgumentNotNull(value, "value").Trim();
 
             if (value.Length < MIN_LENGTH)
                 throw new ArgumentOutOfRangeException(paramName: "name", message: "name length is too small");
