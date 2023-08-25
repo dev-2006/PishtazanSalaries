@@ -10,7 +10,7 @@ namespace Pishtazan.Salaries.Domain.Common
     {
         public Name(string value)
         {
-            throw new NotImplementedException();
+            ArgumentNullException.ThrowIfNull(value, "value");
         }
     }
 }
