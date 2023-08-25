@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Pishtazan.Salaries.OvertimePolicies.Calculators;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,6 +15,18 @@ namespace Pishtazan.Salaries.OvertimePolicies.Tests.Unit
         public void Get_NullCalculatorName_ThrowsArgumentNullException()
         {
             Assert.Throws<ArgumentNullException>(() => factory.Get(null!));
+        }
+
+        [Theory]
+        [InlineData("CalculatorA", typeof(CalcurlatorA))]
+        [InlineData("CalculatorB", typeof(CalcurlatorB))]
+        [InlineData("CalculatorC", typeof(CalcurlatorC))]
+        public void Get_ExistsCalculatorName_ReturnsCalculator(string overTimeCalculatorName, Type calculatorType)
+        {
+            IOvertimePolicyCalculator calculator = factory.Get(overTimeCalculatorName);
+
+            Assert.NotNull(calculator);
+            Assert.True(calculator.GetType() == calculatorType);
         }
     }
 }
