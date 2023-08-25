@@ -20,5 +20,16 @@ namespace Pishtazan.Salaries.Domain.Tests.Unit.Employees.Salaries
 
             Assert.IsType<ArgumentOutOfRangeException>(e);
         }
+
+        [Theory]
+        [InlineData(1)]
+        [InlineData(2)]
+        [InlineData(50)]
+        public void Constructor_ValidSalaryAmount_CreatesSalaryWithEqualValue(long amount)
+        {
+            var s = new Salary(amount);
+
+            Assert.Equal(amount, s.Value);
+        }
     }
 }

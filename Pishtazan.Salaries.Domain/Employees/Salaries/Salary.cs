@@ -10,6 +10,8 @@ namespace Pishtazan.Salaries.Domain.Employees.Salaries
     {
         public const long MIN = 1;
 
+        public long? Value { get; private set; }
+
         public Salary(long value)
         {
             if(value < MIN)
