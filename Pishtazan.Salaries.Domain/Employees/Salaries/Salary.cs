@@ -18,5 +18,6 @@ namespace Pishtazan.Salaries.Domain.Employees.Salaries
         }
 
         public Salary Add(Salary summed) => new Salary(Value + summed.Value);
+        public static Salary operator +(Salary left, Salary right) => throw new NotImplementedException(); 
     }
 }

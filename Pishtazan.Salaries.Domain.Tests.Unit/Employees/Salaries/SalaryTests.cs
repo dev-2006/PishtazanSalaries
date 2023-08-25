@@ -53,5 +53,16 @@ namespace Pishtazan.Salaries.Domain.Tests.Unit.Employees.Salaries
 
             Assert.Equal(sum, s1.Add(s2));
         }
+
+        [Fact]
+        public void PlusOperator_TwoSalaries_ReturnsNewSalaryWithSumOfSalariesAmount()
+        {
+            Salary s1 = new Salary(12);
+            Salary s2 = new Salary(7);
+
+            Salary sum = new Salary(19);
+
+            Assert.Equal(sum, s1 + s2);
+        }
     }
 }
