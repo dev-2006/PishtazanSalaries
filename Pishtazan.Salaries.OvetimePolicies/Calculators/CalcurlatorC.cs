@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using static Pishtazan.Salaries.Infrastructure.Validation.Validate;
 
-namespace Pishtazan.Salaries.OvetimePolicies.Calculators
+namespace Pishtazan.Salaries.OvertimePolicies.Calculators
 {
     public class CalcurlatorC
     {

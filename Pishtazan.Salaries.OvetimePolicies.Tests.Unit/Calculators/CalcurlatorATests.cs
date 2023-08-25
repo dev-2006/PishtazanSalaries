@@ -1,12 +1,12 @@
 ﻿using Pishtazan.Salaries.Domain.Employees.Salaries;
-using Pishtazan.Salaries.OvetimePolicies.Calculators;
+using Pishtazan.Salaries.OvertimePolicies.Calculators;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Pishtazan.Salaries.OvetimePolicies.Tests.Unit.Calculators
+namespace Pishtazan.Salaries.OvertimePolicies.Tests.Unit.Calculators
 {
     public class CalcurlatorATests
     {

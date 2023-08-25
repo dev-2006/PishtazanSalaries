@@ -9,9 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pishtazan.Salaries.Domain",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pishtazan.Salaries.Domain.Tests.Unit", "Pishtazan.Salaries.Domain.Tests.Unit\Pishtazan.Salaries.Domain.Tests.Unit.csproj", "{E7C03FC1-D36F-4335-9B7E-A425208BA620}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pishtazan.Salaries.OvetimePolicies", "Pishtazan.Salaries.OvetimePolicies\Pishtazan.Salaries.OvetimePolicies.csproj", "{3F561F52-D02F-4955-8EFC-45D0495D3D36}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pishtazan.Salaries.OvertimePolicies", "Pishtazan.Salaries.OvetimePolicies\Pishtazan.Salaries.OvertimePolicies.csproj", "{3F561F52-D02F-4955-8EFC-45D0495D3D36}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pishtazan.Salaries.OvetimePolicies.Tests.Unit", "Pishtazan.Salaries.OvetimePolicies.Tests.Unit\Pishtazan.Salaries.OvetimePolicies.Tests.Unit.csproj", "{4FDA5BE8-935C-4FA3-A873-18E0FA4C5D9D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pishtazan.Salaries.OvertimePolicies.Tests.Unit", "Pishtazan.Salaries.OvetimePolicies.Tests.Unit\Pishtazan.Salaries.OvertimePolicies.Tests.Unit.csproj", "{4FDA5BE8-935C-4FA3-A873-18E0FA4C5D9D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pishtazan.Salaries.Infrastructure", "Pishtazan.Salaries.Infrastructure\Pishtazan.Salaries.Infrastructure.csproj", "{BC5F7C91-D469-4C6F-AE29-B9C04D06F141}"
 EndProject
