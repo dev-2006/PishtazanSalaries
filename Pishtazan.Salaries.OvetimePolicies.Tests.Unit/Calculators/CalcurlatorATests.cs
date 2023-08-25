@@ -15,5 +15,11 @@ namespace Pishtazan.Salaries.OvetimePolicies.Tests.Unit.Calculators
         {
             Assert.Throws<ArgumentNullException>(() => new CalcurlatorA().Calculate(null!, new Allowance(1)));
         }
+
+        [Fact]
+        public void Calculate_NullAllowance_ThrowsArgumentNullExcpetion()
+        {
+            Assert.Throws<ArgumentNullException>(() => new CalcurlatorA().Calculate(new BasicSalary(1), null!));
+        }
     }
 }
