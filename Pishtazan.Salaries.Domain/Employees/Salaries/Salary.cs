@@ -10,12 +10,14 @@ namespace Pishtazan.Salaries.Domain.Employees.Salaries
     {
         public const long MIN = 1;
 
-        public long? Value { get; private set; }
+        public long Value { get; private set; }
 
         public Salary(long value)
         {
             if(value < MIN)
                 throw new ArgumentOutOfRangeException(paramName: "salary", message: "salary amount is too few");
+
+            Value = value;
         }
     }
 }
