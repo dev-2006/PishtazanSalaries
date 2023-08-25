@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using static Pishtazan.Salaries.Infrastructure.Validation.Validate;
 namespace Pishtazan.Salaries.OvertimePolicies.Calculators.Factory
 {
-    public class OvertimePolicyCalculatorFactory
+    public class OvertimePolicyCalculatorFactory : IOvertimePolicyCalculatorFactory
     {
         public IOvertimePolicyCalculator[] OvertimePolicyCalculators { get; }
 
