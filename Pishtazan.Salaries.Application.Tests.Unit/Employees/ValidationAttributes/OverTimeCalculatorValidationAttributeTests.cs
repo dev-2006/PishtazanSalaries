@@ -16,5 +16,11 @@ namespace Pishtazan.Salaries.Application.Tests.Unit.Employees.ValidationAttribut
         {
             Assert.True(validationAttribute.IsValid(null!));
         }
+
+        [Fact]
+        public void IsValid_WhenListOfOverTimeCalculatorsNotSet_ThrowsInvalidOperationException()
+        {
+            Assert.Throws<InvalidOperationException>(() => validationAttribute.IsValid(""));
+        }
     }
 }
