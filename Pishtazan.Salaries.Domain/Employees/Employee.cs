@@ -37,6 +37,10 @@ namespace Pishtazan.Salaries.Domain.Employees
             ArgumentNotNull(salaryDetail, nameof(salaryDetail));
             ArgumentNotNull(incomeCalculationStrategy, nameof(incomeCalculationStrategy));
             ArgumentNotNull(overTimeCalculator, nameof(overTimeCalculator));
+
+            Income income = incomeCalculationStrategy.Calculate(salaryDetail, overTimeCalculator);
+
+            _incomes.Add(new IncomeDetail(date, salaryDetail, income));
         }
     }
 }
