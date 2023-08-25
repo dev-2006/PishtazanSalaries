@@ -77,5 +77,10 @@ namespace Pishtazan.Salaries.Domain.Employees
         {
             return _incomes.SingleOrDefault(i => i.Date.IsInSameMonthWith(date));
         }
+
+        public void DeleteIncome(Date date)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

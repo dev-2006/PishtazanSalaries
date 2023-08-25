@@ -77,5 +77,14 @@ namespace Pishtazan.Salaries.Domain.Resources {
                 return ResourceManager.GetString("SalaryInSameMonthNotFoundError", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to There is no salary in specified date.
+        /// </summary>
+        internal static string SalaryNotFoundInSpecifiedDateError {
+            get {
+                return ResourceManager.GetString("SalaryNotFoundInSpecifiedDateError", resourceCulture);
+            }
+        }
     }
 }

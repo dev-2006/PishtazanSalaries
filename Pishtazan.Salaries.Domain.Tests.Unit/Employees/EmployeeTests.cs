@@ -167,5 +167,26 @@ namespace Pishtazan.Salaries.Domain.Tests.Unit.Employees
             Assert.Equal(allowance, employee.Incomes.ToArray()[0].SalaryDetails.Allowance);
             Assert.Equal(transportation, employee.Incomes.ToArray()[0].SalaryDetails.Transportation);
         }
+
+        [Theory]
+        [InlineData("14010503", "14010504")]
+        [InlineData("14000301", "14000310")]
+        [InlineData("13990402", "13990502")]
+        [InlineData("14021112", "14021111")]
+        public void DeleteIncome_WhenIncomeWithExactDateNotExists_ThrowsSalaryNotFoundInSpecifiedDateException(string date1, string date2)
+        {
+            // Arrange
+            List<IncomeDetail> incomes = new List<IncomeDetail>()
+            {
+                new IncomeDetail(Date.FromString(date1), salaryDetail, new Income(5))
+            };
+            Employee employee = new Employee(fullName: new FullName(new FirstName("ali"), new LastName("ahmadi")), incomes);
+
+            // Act
+            var e = Record.Exception(() => employee.DeleteIncome(Date.FromString(date2)));
+
+            // Assert
+            Assert.IsType<SalaryNotFoundInSpecifiedDateException>(e);
+        }
     }
 }

@@ -123,4 +123,7 @@
   <data name="SalaryInSameMonthNotFoundError" xml:space="preserve">
     <value>There is no salary in specified month</value>
   </data>
+  <data name="SalaryNotFoundInSpecifiedDateError" xml:space="preserve">
+    <value>There is no salary in specified date</value>
+  </data>
 </root>

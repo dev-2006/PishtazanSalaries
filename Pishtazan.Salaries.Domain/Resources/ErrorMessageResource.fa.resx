@@ -123,4 +123,7 @@
   <data name="SalaryInSameMonthNotFoundError" xml:space="preserve">
     <value>حقوقی در ماه تعیین شده وجود ندارد</value>
   </data>
+  <data name="SalaryNotFoundInSpecifiedDateError" xml:space="preserve">
+    <value>حقوقی در تاریخ تعیین شده وجود ندارد</value>
+  </data>
 </root>
