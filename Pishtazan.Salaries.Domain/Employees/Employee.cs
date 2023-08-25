@@ -1,4 +1,5 @@
 ﻿using Pishtazan.Salaries.Domain.Common.Salaries;
+using Pishtazan.Salaries.Domain.Employees.Exceptions;
 using Pishtazan.Salaries.Domain.IncomeCalculationStrategies;
 using Pishtazan.Salaries.Infrastructure.Validation;
 using Pishtazan.Salaries.OvertimePolicies.Calculators;
@@ -38,9 +39,17 @@ namespace Pishtazan.Salaries.Domain.Employees
             ArgumentNotNull(incomeCalculationStrategy, nameof(incomeCalculationStrategy));
             ArgumentNotNull(overTimeCalculator, nameof(overTimeCalculator));
 
+            if (salaryInSameMonthExists(date))
+                throw new DuplicateSalariesInSameMonthException();
+
             Income income = incomeCalculationStrategy.Calculate(salaryDetail, overTimeCalculator);
 
             _incomes.Add(new IncomeDetail(date, salaryDetail, income));
+        }
+
+        private bool salaryInSameMonthExists(Date date)
+        {
+            return _incomes.Any(x => x.Date.IsInSameMonthWith(date));
         }
     }
 }

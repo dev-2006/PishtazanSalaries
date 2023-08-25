@@ -75,5 +75,10 @@ namespace Pishtazan.Salaries.Domain.Employees
         {
             return value.Any(c => !char.IsDigit(c));
         }
+
+        internal bool IsInSameMonthWith(Date date)
+        {
+            return Year == date.Year && Month == date.Month;
+        }
     }
 }
