@@ -35,5 +35,11 @@ namespace Pishtazan.Salaries.OvertimePolicies.Tests.Unit
         {
             Assert.Equal(3, factory.OvertimePolicyCalculators?.Length);
         }
+
+        [Fact]
+        public void Get_NotExistCalculatorName_ThrowsInvalidOperationException()
+        {
+            Assert.Throws<InvalidOperationException>(() => factory.Get("abc"));
+        }
     }
 }
