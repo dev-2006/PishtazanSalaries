@@ -1,5 +1,7 @@
 ﻿using Pishtazan.Salaries.Domain.Common.Salaries;
 using Pishtazan.Salaries.Domain.Employees;
+using Pishtazan.Salaries.Domain.IncomeCalculationStrategies;
+using Pishtazan.Salaries.OvertimePolicies.Calculators;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +12,13 @@ namespace Pishtazan.Salaries.Domain.Tests.Unit.Employees
 {
     public class EmployeeTests
     {
+        private Employee employee = new Employee(
+                fullName: new FullName(new FirstName("ali"), new LastName("ahmadi")), incomes: new List<IncomeDetail>());
+        private Date date = Date.FromString("14000101");
+        private SalaryDetail salaryDetail = new SalaryDetail(new BasicSalary(1), new Allowance(1), new Transportation(1));
+        private IIncomeCalculationStrategy incomeCal = new IncomeCalculationStrategy();
+        private IOvertimePolicyCalculator overTimeCal = new CalculatorA();
+
         [Fact]
         public void Constructor_NullFullName_ThrowsArgumentNullException()
         {
@@ -21,6 +30,32 @@ namespace Pishtazan.Salaries.Domain.Tests.Unit.Employees
         {
             Assert.Throws<ArgumentNullException>(() => new Employee(
                 fullName: new FullName(new FirstName("ali"), new LastName("ahmadi")), incomes: null!));
+        }
+
+        [Fact]
+        public void AddIncome_NullData_ThrowsArgumentNullException()
+        {
+            Assert.Throws<ArgumentNullException>(() => employee.AddIncome(date: null!, salaryDetail, incomeCal, overTimeCal));
+        }
+
+        [Fact]
+        public void Constructor_NullSalaryDetail_ThrowsArgumentNullException()
+        {
+            Assert.Throws<ArgumentNullException>(() => employee.AddIncome(date, salaryDetail: null!, incomeCal, overTimeCal));
+        }
+
+        [Fact]
+        public void Constructor_NullIncomeCalculationStrategy_ThrowsArgumentNullException()
+        {
+            Assert.Throws<ArgumentNullException>(() => employee.AddIncome(date, salaryDetail, incomeCalculationStrategy: null!,
+                overTimeCal));
+        }
+
+        [Fact]
+        public void AddIncome_NullOvertimePolicyCalculator_ThrowsArgumentNullException()
+        {
+            Assert.Throws<ArgumentNullException>(() => employee.AddIncome(date, salaryDetail, incomeCal, 
+                overTimeCalculator: null!));
         }
     }
 }

@@ -29,5 +29,14 @@ namespace Pishtazan.Salaries.Domain.Employees
             FullName = ArgumentNotNull(fullName, nameof(fullName));
             _incomes = ArgumentNotNull(incomes, nameof(incomes));
         }
+
+        public void AddIncome(Date date, SalaryDetail salaryDetail, IIncomeCalculationStrategy incomeCalculationStrategy,
+            IOvertimePolicyCalculator overTimeCalculator)
+        {
+            ArgumentNotNull(date, nameof(date));
+            ArgumentNotNull(salaryDetail, nameof(salaryDetail));
+            ArgumentNotNull(incomeCalculationStrategy, nameof(incomeCalculationStrategy));
+            ArgumentNotNull(overTimeCalculator, nameof(overTimeCalculator));
+        }
     }
 }
