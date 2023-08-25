@@ -86,6 +86,8 @@ namespace Pishtazan.Salaries.Domain.Employees
 
             if (incomeInSpecifiedDate == null)
                 throw new SalaryNotFoundInSpecifiedDateException();
+
+            _incomes.Remove(incomeInSpecifiedDate);
         }
 
         private IncomeDetail? findIncomeWithExactDate(Date date)
