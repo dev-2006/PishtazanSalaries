@@ -16,5 +16,20 @@ namespace Pishtazan.Salaries.Domain.Tests.Unit.Common
 
             Assert.IsType<ArgumentNullException>(e);
         }
+
+        [Theory]
+        [InlineData("")]
+        [InlineData(" ")]
+        [InlineData("  ")]
+        [InlineData("a")]
+        [InlineData("b")]
+        [InlineData(" a")]
+        [InlineData("a  ")]
+        public void Constructor_TooSmallNames_ThrowsArgumentOutOfRangeException(string nameStr)
+        {
+            var e = Record.Exception(() => new Name(nameStr));
+
+            Assert.IsType<ArgumentOutOfRangeException>(e);
+        }
     }
 }
