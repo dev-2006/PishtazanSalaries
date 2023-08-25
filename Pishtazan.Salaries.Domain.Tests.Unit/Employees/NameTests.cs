@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Pishtazan.Salaries.Domain.Tests.Unit.Common
+namespace Pishtazan.Salaries.Domain.Tests.Unit.Employees
 {
     public class NameTests
     {
