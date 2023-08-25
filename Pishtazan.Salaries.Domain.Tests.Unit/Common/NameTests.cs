@@ -31,5 +31,15 @@ namespace Pishtazan.Salaries.Domain.Tests.Unit.Common
 
             Assert.IsType<ArgumentOutOfRangeException>(e);
         }
+
+        [Theory]
+        [InlineData(201)]
+        [InlineData(300)]
+        public void Constructor_TooBigNames_ThrowsArgumentOutOfRangeException(int nameLength)
+        {
+            var e = Record.Exception(() => new Name(new string('a', nameLength)));
+
+            Assert.IsType<ArgumentOutOfRangeException>(e);
+        }
     }
 }
