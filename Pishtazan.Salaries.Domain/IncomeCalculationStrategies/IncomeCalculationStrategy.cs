@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Pishtazan.Salaries.Domain.IncomeCalculationStrategies
 {
-    public class IncomeCalculationStrategy
+    public class IncomeCalculationStrategy : IIncomeCalculationStrategy
     {
         public Income Calculate(SalaryDetail salaryDetail, IOvertimePolicyCalculator overtimeCalculator)
         {
