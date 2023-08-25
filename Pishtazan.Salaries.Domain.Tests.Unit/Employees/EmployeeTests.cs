@@ -93,5 +93,26 @@ namespace Pishtazan.Salaries.Domain.Tests.Unit.Employees
             // Assert
             Assert.IsType<DuplicateSalariesInSameMonthException>(e);
         }
+
+        [Theory]
+        [InlineData("14010503", "14010601")]
+        [InlineData("14000301", "14000231")]
+        [InlineData("13990402", "13990530")]
+        [InlineData("14021112", "14021201")]
+        public void AddIncome_WhenNoIncomeInSameMonthExists_IncomeWillBeAddedToIncomes(string date1, string date2)
+        {
+            // Arrange
+            List<IncomeDetail> incomes = new List<IncomeDetail>()
+            {
+                new IncomeDetail(Date.FromString(date1), salaryDetail, new Income(5))
+            };
+            Employee employee = new Employee(fullName: new FullName(new FirstName("ali"), new LastName("ahmadi")), incomes);
+
+            // Act
+            employee.AddIncome(Date.FromString(date2), salaryDetail, incomeCal, overTimeCal);
+
+            // Assert
+            Assert.Equal(2, employee.Incomes.Count);
+        }
     }
 }
