@@ -13,10 +13,12 @@ namespace Pishtazan.Salaries.Application.Employees.ValidationAttributes
             if (value == null)
                 return true;
 
+            string valueStr = (string)value;
+
             if (OvertimePolicyCalculators == null)
                 throw new InvalidOperationException();
 
-            throw new NotImplementedException();
+            return OvertimePolicyCalculators.Any(o => o.Name == valueStr);
         }
     }
 }
