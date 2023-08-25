@@ -26,7 +26,7 @@ namespace Pishtazan.Salaries.Domain.Employees
         }
 
         public Employee(FullName fullName, ICollection<IncomeDetail> incomes)
-        {           
+        {
             FullName = ArgumentNotNull(fullName, nameof(fullName));
             _incomes = ArgumentNotNull(incomes, nameof(incomes));
         }
@@ -80,7 +80,17 @@ namespace Pishtazan.Salaries.Domain.Employees
 
         public void DeleteIncome(Date date)
         {
-            throw new NotImplementedException();
+            ArgumentNotNull(date, nameof(date));
+
+            IncomeDetail? incomeInSpecifiedDate = findIncomeWithExactDate(date);
+
+            if (incomeInSpecifiedDate == null)
+                throw new SalaryNotFoundInSpecifiedDateException();
+        }
+
+        private IncomeDetail? findIncomeWithExactDate(Date date)
+        {
+            return _incomes.SingleOrDefault(i => i.Date == date);
         }
     }
 }
