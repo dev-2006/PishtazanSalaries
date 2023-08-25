@@ -1,4 +1,5 @@
-﻿using Pishtazan.Salaries.Application.Resources;
+﻿using Pishtazan.Salaries.Application.Employees.ValidationAttributes;
+using Pishtazan.Salaries.Application.Resources;
 using Pishtazan.Salaries.Domain.Common.Salaries;
 using Pishtazan.Salaries.Domain.Employees;
 using System;

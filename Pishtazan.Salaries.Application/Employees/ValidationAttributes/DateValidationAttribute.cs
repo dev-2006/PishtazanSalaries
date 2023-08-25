@@ -1,7 +1,7 @@
 ﻿using Pishtazan.Salaries.Domain.Employees;
 using System.ComponentModel.DataAnnotations;
 
-namespace Pishtazan.Salaries.Application.Employees
+namespace Pishtazan.Salaries.Application.Employees.ValidationAttributes
 {
     public class DateValidationAttribute : ValidationAttribute
     {
