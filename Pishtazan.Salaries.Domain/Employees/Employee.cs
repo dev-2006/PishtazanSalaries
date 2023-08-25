@@ -54,7 +54,18 @@ namespace Pishtazan.Salaries.Domain.Employees
 
         public void UpdateIncome(Date date, SalaryDetail salaryDetail)
         {
-            throw new NotImplementedException();
+            ArgumentNotNull(date, nameof(date));
+            ArgumentNotNull(salaryDetail, nameof(salaryDetail));
+
+            IncomeDetail? incomeInSameMonth = findIncomeInSameMonthWith(date);
+
+            if (incomeInSameMonth == null)
+                throw new SalaryNotFoundException();
+        }
+
+        private IncomeDetail? findIncomeInSameMonthWith(Date date)
+        {
+            return _incomes.SingleOrDefault(i => i.Date.IsInSameMonthWith(date));
         }
     }
 }
