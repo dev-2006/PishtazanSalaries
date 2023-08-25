@@ -14,5 +14,20 @@ namespace Pishtazan.Salaries.Domain.Tests.Unit.Employees
         {
             Assert.Throws<ArgumentNullException>(() => Date.FromString(null!));
         }
+
+        [Theory]
+        [InlineData("")]
+        [InlineData("  ")]
+        [InlineData("a")]
+        [InlineData("  ab  ")]
+        [InlineData("1400")]
+        [InlineData("140001")]
+        [InlineData("1400010")]
+        [InlineData("1400010 ")]
+        [InlineData(" 1400010 ")]
+        public void FromString_IncompleteAndInvalidDateStr_ThrowsArgumentOutOfRangeException(string dateStr)
+        {
+            Assert.Throws<ArgumentOutOfRangeException>(() => Date.FromString(dateStr));
+        }
     }
 }
