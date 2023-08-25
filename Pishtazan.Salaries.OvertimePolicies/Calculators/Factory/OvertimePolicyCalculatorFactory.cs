@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using static Pishtazan.Salaries.Infrastructure.Validation.Validate;
-namespace Pishtazan.Salaries.OvertimePolicies
+namespace Pishtazan.Salaries.OvertimePolicies.Calculators.Factory
 {
     public class OvertimePolicyCalculatorFactory
     {
