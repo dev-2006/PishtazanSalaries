@@ -106,6 +106,15 @@ namespace Pishtazan.Salaries.Application.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to OverTimeCalculator.
+        /// </summary>
+        internal static string OverTimeCalculator {
+            get {
+                return ResourceManager.GetString("OverTimeCalculator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Transportation.
         /// </summary>
         internal static string Transportation {

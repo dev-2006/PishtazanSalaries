@@ -47,6 +47,10 @@ namespace Pishtazan.Salaries.Application.Employees.Contracts.Command
              ErrorMessageResourceType = typeof(ErrorMessageResource), ErrorMessageResourceName = "RangeError")]
         public long? Transportation { get; set; }
 
+        [Display(ResourceType = typeof(DisplayNameResource), Name = "OverTimeCalculator")]
+        [Required(ErrorMessageResourceType = typeof(ErrorMessageResource), ErrorMessageResourceName = "RequiredError")]        
+        public string? OverTimeCalculator { get; set; }
+
         public EmployeeSalary()
         {
         }

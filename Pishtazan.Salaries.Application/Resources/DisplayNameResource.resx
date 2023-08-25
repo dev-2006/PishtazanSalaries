@@ -132,6 +132,9 @@
   <data name="LastName" xml:space="preserve">
     <value>Last Name</value>
   </data>
+  <data name="OverTimeCalculator" xml:space="preserve">
+    <value>OverTimeCalculator</value>
+  </data>
   <data name="Transportation" xml:space="preserve">
     <value>Transportation</value>
   </data>
