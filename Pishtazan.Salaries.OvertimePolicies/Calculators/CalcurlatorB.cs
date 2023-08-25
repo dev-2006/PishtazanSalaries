@@ -8,7 +8,7 @@ using static Pishtazan.Salaries.Infrastructure.Validation.Validate;
 
 namespace Pishtazan.Salaries.OvertimePolicies.Calculators
 {
-    public class CalcurlatorB
+    public class CalcurlatorB : IOvertimePolicyCalculator
     {
         public Salary Calculate(BasicSalary basicSalary, Allowance allowance)
         {
