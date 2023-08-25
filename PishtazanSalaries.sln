@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pishtazan.Salaries.Domain",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pishtazan.Salaries.Domain.Tests.Unit", "Pishtazan.Salaries.Domain.Tests.Unit\Pishtazan.Salaries.Domain.Tests.Unit.csproj", "{E7C03FC1-D36F-4335-9B7E-A425208BA620}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pishtazan.Salaries.OvetimePolicies", "Pishtazan.Salaries.OvetimePolicies\Pishtazan.Salaries.OvetimePolicies.csproj", "{3F561F52-D02F-4955-8EFC-45D0495D3D36}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pishtazan.Salaries.OvetimePolicies.Tests.Unit", "Pishtazan.Salaries.OvetimePolicies.Tests.Unit\Pishtazan.Salaries.OvetimePolicies.Tests.Unit.csproj", "{4FDA5BE8-935C-4FA3-A873-18E0FA4C5D9D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{E7C03FC1-D36F-4335-9B7E-A425208BA620}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E7C03FC1-D36F-4335-9B7E-A425208BA620}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E7C03FC1-D36F-4335-9B7E-A425208BA620}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F561F52-D02F-4955-8EFC-45D0495D3D36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F561F52-D02F-4955-8EFC-45D0495D3D36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F561F52-D02F-4955-8EFC-45D0495D3D36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F561F52-D02F-4955-8EFC-45D0495D3D36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FDA5BE8-935C-4FA3-A873-18E0FA4C5D9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FDA5BE8-935C-4FA3-A873-18E0FA4C5D9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FDA5BE8-935C-4FA3-A873-18E0FA4C5D9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FDA5BE8-935C-4FA3-A873-18E0FA4C5D9D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
