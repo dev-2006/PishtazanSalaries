@@ -13,4 +13,28 @@
     <ProjectReference Include="..\Pishtazan.Salaries.OvertimePolicies\Pishtazan.Salaries.OvertimePolicies.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="Resources\ErrorMessageResource.fa.Designer.cs">
+      <DependentUpon>ErrorMessageResource.fa.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Resources\ErrorMessageResource.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ErrorMessageResource.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\ErrorMessageResource.fa.resx">
+      <LastGenOutput>ErrorMessageResource.fa.Designer.cs</LastGenOutput>
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\ErrorMessageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ErrorMessageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
 </Project>

@@ -1,5 +1,6 @@
 ﻿using Pishtazan.Salaries.Domain.Common.Salaries;
 using Pishtazan.Salaries.Domain.Employees;
+using Pishtazan.Salaries.Domain.Employees.Exceptions;
 using Pishtazan.Salaries.Domain.IncomeCalculationStrategies;
 using Pishtazan.Salaries.OvertimePolicies.Calculators;
 using System;
@@ -15,7 +16,7 @@ namespace Pishtazan.Salaries.Domain.Tests.Unit.Employees
     {
         private Employee employee = new Employee(
                 fullName: new FullName(new FirstName("ali"), new LastName("ahmadi")), incomes: new List<IncomeDetail>());
-        private Date date = Date.FromString("14000101");
+        private Date date = Date.FromString("14000101");        
         private SalaryDetail salaryDetail = new SalaryDetail(new BasicSalary(1), new Allowance(1), new Transportation(1));
         private IIncomeCalculationStrategy incomeCal = new IncomeCalculationStrategy();
         private IOvertimePolicyCalculator overTimeCal = new CalculatorA();
@@ -70,6 +71,27 @@ namespace Pishtazan.Salaries.Domain.Tests.Unit.Employees
 
             // Assert
             Assert.Equal(1, employee.Incomes.Count);
+        }
+
+        [Theory]
+        [InlineData("14010503", "14010527")]
+        [InlineData("14000301", "14000331")]
+        [InlineData("13990402", "13990430")]
+        [InlineData("14021112", "14021125")]
+        public void AddIncome_WhenIncomeInSameMonthExists_ThrowsDuplicateSalariesInSameMonthException(string date1, string date2)
+        {
+            // Arrange
+            List<IncomeDetail> incomes = new List<IncomeDetail>()
+            {
+                new IncomeDetail(Date.FromString(date1), salaryDetail, new Income(5))
+            };
+            Employee employee = new Employee(fullName: new FullName(new FirstName("ali"), new LastName("ahmadi")), incomes);
+
+            // Act
+            var e = Record.Exception(() => employee.AddIncome(Date.FromString(date2), salaryDetail, incomeCal, overTimeCal));
+
+            // Assert
+            Assert.IsType<DuplicateSalariesInSameMonthException>(e);
         }
     }
 }
