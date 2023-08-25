@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Pishtazan.Salaries.Domain.Common;
 
-namespace Pishtazan.Salaries.Domain.Common
+namespace Pishtazan.Salaries.Domain.Employees
 {
     public record Name : ValueTypeBase<string>
     {
@@ -15,7 +16,7 @@ namespace Pishtazan.Salaries.Domain.Common
         {
             ArgumentNullException.ThrowIfNull(value, "value");
 
-            value= value.Trim();
+            value = value.Trim();
 
             if (value.Length < MIN_LENGTH)
                 throw new ArgumentOutOfRangeException(paramName: "name", message: "name length is too small");

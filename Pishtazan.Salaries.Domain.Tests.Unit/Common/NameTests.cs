@@ -1,4 +1,5 @@
 ﻿using Pishtazan.Salaries.Domain.Common;
+using Pishtazan.Salaries.Domain.Employees;
 using System;
 using System.Collections.Generic;
 using System.Linq;
