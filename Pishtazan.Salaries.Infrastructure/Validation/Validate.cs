@@ -8,9 +8,11 @@ namespace Pishtazan.Salaries.Infrastructure.Validation
 {
     public static class Validate
     {
-        public static T ArgumentNotNull<T>(T? obj, string parameterName)
+        public static T ArgumentNotNull<T>(T? obj, string argumentName)
         {
-            throw new NotImplementedException();
+            ArgumentNullException.ThrowIfNull(obj, argumentName);
+
+            return obj;
         }
     }
 }
