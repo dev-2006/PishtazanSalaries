@@ -55,5 +55,16 @@ namespace Pishtazan.Salaries.Domain.Tests.Unit.Common
 
             Assert.Equal(expectedValue, name.Value);
         }
+
+        [Fact]
+        public void DiffrentNameObjectWithSameValueAreEqual()
+        {
+            var name1 = new Name("ali");
+            var name2 = new Name("  ali  ");
+
+            Assert.Equal(name1, name2);
+            Assert.True(name1 == name2);
+            Assert.False(ReferenceEquals(name1, name2));
+        }
     }
 }
