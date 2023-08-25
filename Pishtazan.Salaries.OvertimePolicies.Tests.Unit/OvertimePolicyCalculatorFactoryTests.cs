@@ -28,5 +28,11 @@ namespace Pishtazan.Salaries.OvertimePolicies.Tests.Unit
             Assert.NotNull(calculator);
             Assert.True(calculator.GetType() == calculatorType);
         }
+
+        [Fact]
+        public void Constructor_LoadsAllOvertimePolicyCalculators()
+        {
+            Assert.Equal(3, factory.OvertimePolicyCalculators?.Length);
+        }
     }
 }
