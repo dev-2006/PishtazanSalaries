@@ -9,6 +9,7 @@ namespace Pishtazan.Salaries.Domain.Common
     public record Name
     {
         public const int MIN_LENGTH = 2;
+        public const int MAX_LENGTH = 200;
 
         public Name(string value)
         {
@@ -18,6 +19,9 @@ namespace Pishtazan.Salaries.Domain.Common
 
             if (value.Length < MIN_LENGTH)
                 throw new ArgumentOutOfRangeException(paramName: "name", message: "name length is too small");
+
+            if (value.Length > MAX_LENGTH)
+                throw new ArgumentOutOfRangeException(paramName: "name", message: "name length is too big");
         }
     }
 }
