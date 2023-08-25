@@ -8,7 +8,7 @@ using static Pishtazan.Salaries.Infrastructure.Validation.Validate;
 
 namespace Pishtazan.Salaries.OvertimePolicies.Calculators
 {
-    public class CalcurlatorA : IOvertimePolicyCalculator
+    public class CalculatorA : IOvertimePolicyCalculator
     {
         public const string NAME = "CalculatorA";
         public string Name => NAME;

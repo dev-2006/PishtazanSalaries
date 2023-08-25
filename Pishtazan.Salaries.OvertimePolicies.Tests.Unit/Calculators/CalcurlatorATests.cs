@@ -13,13 +13,13 @@ namespace Pishtazan.Salaries.OvertimePolicies.Tests.Unit.Calculators
         [Fact]
         public void Calculate_NullBasicSalary_ThrowsArgumentNullExcpetion()
         {
-            Assert.Throws<ArgumentNullException>(() => new CalcurlatorA().Calculate(null!, new Allowance(1)));
+            Assert.Throws<ArgumentNullException>(() => new CalculatorA().Calculate(null!, new Allowance(1)));
         }
 
         [Fact]
         public void Calculate_NullAllowance_ThrowsArgumentNullExcpetion()
         {
-            Assert.Throws<ArgumentNullException>(() => new CalcurlatorA().Calculate(new BasicSalary(1), null!));
+            Assert.Throws<ArgumentNullException>(() => new CalculatorA().Calculate(new BasicSalary(1), null!));
         }
 
         [Theory]
@@ -27,7 +27,7 @@ namespace Pishtazan.Salaries.OvertimePolicies.Tests.Unit.Calculators
         [InlineData(12L, 13L, 25L)]
         public void Calculate_NotNullArguments_ReturnsSumOfArguments(long basicSalaryAmount, long allowanceAmount, long sum)
         {
-            Assert.Equal(new Salary(sum), new CalcurlatorA().Calculate(new BasicSalary(basicSalaryAmount), new Allowance(allowanceAmount)));
+            Assert.Equal(new Salary(sum), new CalculatorA().Calculate(new BasicSalary(basicSalaryAmount), new Allowance(allowanceAmount)));
         }
     }
 }

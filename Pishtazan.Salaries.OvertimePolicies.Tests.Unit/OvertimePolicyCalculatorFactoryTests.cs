@@ -19,9 +19,9 @@ namespace Pishtazan.Salaries.OvertimePolicies.Tests.Unit
         }
 
         [Theory]
-        [InlineData("CalculatorA", typeof(CalcurlatorA))]
-        [InlineData("CalculatorB", typeof(CalcurlatorB))]
-        [InlineData("CalculatorC", typeof(CalcurlatorC))]
+        [InlineData("CalculatorA", typeof(CalculatorA))]
+        [InlineData("CalculatorB", typeof(CalculatorB))]
+        [InlineData("CalculatorC", typeof(CalculatorC))]
         public void Get_ExistsCalculatorName_ReturnsCalculator(string overTimeCalculatorName, Type calculatorType)
         {
             IOvertimePolicyCalculator calculator = factory.Get(overTimeCalculatorName);
