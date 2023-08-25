@@ -135,5 +135,37 @@ namespace Pishtazan.Salaries.Domain.Tests.Unit.Employees
             // Assert
             Assert.IsType<SalaryNotFoundException>(e);
         }
+
+        [Theory]
+        [InlineData("14010503", "14010527")]
+        [InlineData("14000301", "14000331")]
+        [InlineData("13990402", "13990430")]
+        [InlineData("14021112", "14021125")]
+        public void UpdateIncome_WhenIncomeInSameMonthExists_ItWillBeReplaced(string date1, string date2)
+        {
+            // Arrange
+            List<IncomeDetail> incomes = new List<IncomeDetail>()
+            {
+                new IncomeDetail(Date.FromString(date1), salaryDetail, new Income(5))
+            };
+            Employee employee = new Employee(fullName: new FullName(new FirstName("ali"), new LastName("ahmadi")), incomes);
+
+            // Act
+            var basicSalary = new BasicSalary(2);
+            var allowance = new Allowance(3);
+            var transportation = new Transportation(4);
+            SalaryDetail salaryDetail2 = new SalaryDetail(basicSalary, allowance, transportation);
+            Date d2 = Date.FromString(date2);
+            employee.UpdateIncome(d2, salaryDetail2);
+
+            // Assert
+            Income expectedIncome = new Income(2 + 3 + 4 + (2 + 3));
+            Assert.Equal(1, employee.Incomes.Count);
+            Assert.Equal(d2, employee.Incomes.ToArray()[0].Date);
+            Assert.Equal(expectedIncome, employee.Incomes.ToArray()[0].Income);
+            Assert.Equal(basicSalary, employee.Incomes.ToArray()[0].SalaryDetails.BasicSalary);
+            Assert.Equal(allowance, employee.Incomes.ToArray()[0].SalaryDetails.Allowance);
+            Assert.Equal(transportation, employee.Incomes.ToArray()[0].SalaryDetails.Transportation);
+        }
     }
 }
