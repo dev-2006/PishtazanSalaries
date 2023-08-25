@@ -16,5 +16,10 @@ namespace Pishtazan.Salaries.Domain.Employees.Salaries
             if(value < MIN)
                 throw new ArgumentOutOfRangeException(paramName: "salary", message: "salary amount is too few");
         }
+
+        public Salary Add(Salary summed)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

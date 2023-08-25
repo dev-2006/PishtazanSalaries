@@ -42,5 +42,16 @@ namespace Pishtazan.Salaries.Domain.Tests.Unit.Employees.Salaries
             Assert.True(salary1 == salary2);
             Assert.False(ReferenceEquals(salary1, salary2));
         }
+
+        [Fact]
+        public void Add_TwoSalaries_ReturnsNewSalaryWithSumOfSalariesAmount()
+        {
+            Salary s1 = new Salary(20);
+            Salary s2 = new Salary(15);
+
+            Salary sum = new Salary(35);
+
+            Assert.Equal(sum, s1.Add(s2));
+        }
     }
 }
