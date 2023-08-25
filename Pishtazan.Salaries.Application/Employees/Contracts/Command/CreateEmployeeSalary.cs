@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Pishtazan.Salaries.Application.Contracts.Command
+namespace Pishtazan.Salaries.Application.Employees.Contracts.Command
 {
     public class CreateEmployeeSalary : EmployeeSalary
     {

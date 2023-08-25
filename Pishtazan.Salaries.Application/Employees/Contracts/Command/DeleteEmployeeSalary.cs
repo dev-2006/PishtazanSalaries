@@ -8,7 +8,7 @@ using System.Security.AccessControl;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Pishtazan.Salaries.Application.Contracts.Command
+namespace Pishtazan.Salaries.Application.Employees.Contracts.Command
 {
     public class DeleteEmployeeSalary
     {
