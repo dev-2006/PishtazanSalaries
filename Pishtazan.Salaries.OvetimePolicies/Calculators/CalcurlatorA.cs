@@ -9,6 +9,11 @@ namespace Pishtazan.Salaries.OvetimePolicies.Calculators
 {
     public class CalcurlatorA
     {
-        public Salary Calculate(BasicSalary basicSalary, Allowance allowance) => throw new NotImplementedException();
+        public Salary Calculate(BasicSalary basicSalary, Allowance allowance)
+        {
+            ArgumentNullException.ThrowIfNull(basicSalary, nameof(basicSalary));
+
+            throw new NotImplementedException();
+        }
     }
 }
