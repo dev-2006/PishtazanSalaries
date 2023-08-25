@@ -21,4 +21,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Pishtazan.Salaries.Application\Pishtazan.Salaries.Application.csproj" />
+  </ItemGroup>
+
 </Project>
