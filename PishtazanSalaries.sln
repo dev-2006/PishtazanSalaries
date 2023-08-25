@@ -17,11 +17,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pishtazan.Salaries.Overtime
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pishtazan.Salaries.OvertimePolicies.Tests.Unit", "Pishtazan.Salaries.OvertimePolicies.Tests.Unit\Pishtazan.Salaries.OvertimePolicies.Tests.Unit.csproj", "{C248ECC7-1235-4D51-BA50-55986A37FF00}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pishtazan.Salaries.Domain.Common", "Pishtazan.Salaries.Domain.Common\Pishtazan.Salaries.Domain.Common.csproj", "{C6FE78B9-74CF-4165-B378-5FBA93F95B10}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pishtazan.Salaries.Domain.Common", "Pishtazan.Salaries.Domain.Common\Pishtazan.Salaries.Domain.Common.csproj", "{C6FE78B9-74CF-4165-B378-5FBA93F95B10}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pishtazan.Salaries.Domain.Common.Tests.Unit", "Pishtazan.Salaries.Domain.Common.Tests.Unit\Pishtazan.Salaries.Domain.Common.Tests.Unit.csproj", "{AFC6538B-9436-4D08-8F0F-486820DF98E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pishtazan.Salaries.Domain.Common.Tests.Unit", "Pishtazan.Salaries.Domain.Common.Tests.Unit\Pishtazan.Salaries.Domain.Common.Tests.Unit.csproj", "{AFC6538B-9436-4D08-8F0F-486820DF98E5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pishtazan.Salaries.Framework", "Pishtazan.Salaries.Framework\Pishtazan.Salaries.Framework.csproj", "{DD13004C-A365-4CFE-9184-5B01B48D9E00}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pishtazan.Salaries.Framework", "Pishtazan.Salaries.Framework\Pishtazan.Salaries.Framework.csproj", "{DD13004C-A365-4CFE-9184-5B01B48D9E00}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pishtazan.Salaries.Application", "Pishtazan.Salaries.Application\Pishtazan.Salaries.Application.csproj", "{B45C5A65-F6E9-4BC9-A6C0-83D754B83EAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pishtazan.Salaries.Application.Tests.Unit", "Pishtazan.Salaries.Application.Tests.Unit\Pishtazan.Salaries.Application.Tests.Unit.csproj", "{A43B1974-FF20-4753-BB0D-024D355E111A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +73,14 @@ Global
 		{DD13004C-A365-4CFE-9184-5B01B48D9E00}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD13004C-A365-4CFE-9184-5B01B48D9E00}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DD13004C-A365-4CFE-9184-5B01B48D9E00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B45C5A65-F6E9-4BC9-A6C0-83D754B83EAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B45C5A65-F6E9-4BC9-A6C0-83D754B83EAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B45C5A65-F6E9-4BC9-A6C0-83D754B83EAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B45C5A65-F6E9-4BC9-A6C0-83D754B83EAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A43B1974-FF20-4753-BB0D-024D355E111A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A43B1974-FF20-4753-BB0D-024D355E111A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A43B1974-FF20-4753-BB0D-024D355E111A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A43B1974-FF20-4753-BB0D-024D355E111A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
