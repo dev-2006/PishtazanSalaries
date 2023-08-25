@@ -25,5 +25,14 @@ namespace Pishtazan.Salaries.Domain.Tests.Unit.IncomeCalculationStrategies
             Assert.Throws<ArgumentNullException>(() => startegy.Calculate(
                 new SalaryDetail(new BasicSalary(1), new Allowance(1), new Transportation(1)), null!));
         }
+
+        [Fact]
+        public void Calculate_NotNullArguments_AddsBasicAllowanceTransportationAndOverTimeCalculationResults()
+        {
+            Income result = startegy.Calculate(
+                new SalaryDetail(new BasicSalary(1), new Allowance(2), new Transportation(3)), new CalculatorA());
+
+            Assert.Equal(new Income(1 + 2 + 3 + (1 + 2)), result);
+        }
     }
 }
