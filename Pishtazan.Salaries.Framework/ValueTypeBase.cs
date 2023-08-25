@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Pishtazan.Salaries.Domain.Common
+namespace Pishtazan.Salaries.Framework
 {
     public record ValueTypeBase<T>
     {

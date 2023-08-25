@@ -17,6 +17,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pishtazan.Salaries.Overtime
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pishtazan.Salaries.OvertimePolicies.Tests.Unit", "Pishtazan.Salaries.OvertimePolicies.Tests.Unit\Pishtazan.Salaries.OvertimePolicies.Tests.Unit.csproj", "{C248ECC7-1235-4D51-BA50-55986A37FF00}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pishtazan.Salaries.Domain.Common", "Pishtazan.Salaries.Domain.Common\Pishtazan.Salaries.Domain.Common.csproj", "{C6FE78B9-74CF-4165-B378-5FBA93F95B10}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pishtazan.Salaries.Domain.Common.Tests.Unit", "Pishtazan.Salaries.Domain.Common.Tests.Unit\Pishtazan.Salaries.Domain.Common.Tests.Unit.csproj", "{AFC6538B-9436-4D08-8F0F-486820DF98E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pishtazan.Salaries.Framework", "Pishtazan.Salaries.Framework\Pishtazan.Salaries.Framework.csproj", "{DD13004C-A365-4CFE-9184-5B01B48D9E00}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +57,18 @@ Global
 		{C248ECC7-1235-4D51-BA50-55986A37FF00}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C248ECC7-1235-4D51-BA50-55986A37FF00}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C248ECC7-1235-4D51-BA50-55986A37FF00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6FE78B9-74CF-4165-B378-5FBA93F95B10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6FE78B9-74CF-4165-B378-5FBA93F95B10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6FE78B9-74CF-4165-B378-5FBA93F95B10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6FE78B9-74CF-4165-B378-5FBA93F95B10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFC6538B-9436-4D08-8F0F-486820DF98E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFC6538B-9436-4D08-8F0F-486820DF98E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFC6538B-9436-4D08-8F0F-486820DF98E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFC6538B-9436-4D08-8F0F-486820DF98E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD13004C-A365-4CFE-9184-5B01B48D9E00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD13004C-A365-4CFE-9184-5B01B48D9E00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD13004C-A365-4CFE-9184-5B01B48D9E00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD13004C-A365-4CFE-9184-5B01B48D9E00}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

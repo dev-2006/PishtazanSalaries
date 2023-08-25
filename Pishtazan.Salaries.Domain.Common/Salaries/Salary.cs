@@ -1,11 +1,12 @@
 ﻿using Pishtazan.Salaries.Domain.Common;
+using Pishtazan.Salaries.Framework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Pishtazan.Salaries.Domain.Employees.Salaries
+namespace Pishtazan.Salaries.Domain.Common.Salaries
 {
     public record Salary : ValueTypeBase<long>
     {

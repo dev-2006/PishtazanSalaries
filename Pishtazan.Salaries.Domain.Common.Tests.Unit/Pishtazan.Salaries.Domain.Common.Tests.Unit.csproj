@@ -23,7 +23,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Pishtazan.Salaries.Domain.Common\Pishtazan.Salaries.Domain.Common.csproj" />
-    <ProjectReference Include="..\Pishtazan.Salaries.OvertimePolicies\Pishtazan.Salaries.OvertimePolicies.csproj" />
   </ItemGroup>
 
 </Project>

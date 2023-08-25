@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Pishtazan.Salaries.Domain.Employees.Salaries
+namespace Pishtazan.Salaries.Domain.Common.Salaries
 {
     public record Income : Salary
     {

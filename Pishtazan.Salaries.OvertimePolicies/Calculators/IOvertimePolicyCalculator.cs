@@ -1,4 +1,4 @@
-﻿using Pishtazan.Salaries.Domain.Employees.Salaries;
+﻿using Pishtazan.Salaries.Domain.Common.Salaries;
 
 namespace Pishtazan.Salaries.OvertimePolicies.Calculators
 {

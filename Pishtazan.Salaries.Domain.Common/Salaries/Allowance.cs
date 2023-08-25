@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Pishtazan.Salaries.Domain.Employees.Salaries
+namespace Pishtazan.Salaries.Domain.Common.Salaries
 {
-    public record BasicSalary : Salary
+    public record Allowance : Salary
     {
-        public BasicSalary(long value) : base(value)
+        public Allowance(long value) : base(value)
         {
         }
     }

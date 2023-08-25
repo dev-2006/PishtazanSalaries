@@ -1,4 +1,4 @@
-﻿using Pishtazan.Salaries.Domain.Employees.Salaries;
+﻿using Pishtazan.Salaries.Domain.Common.Salaries;
 using Pishtazan.Salaries.OvertimePolicies.Calculators;
 using System;
 using System.Collections.Generic;

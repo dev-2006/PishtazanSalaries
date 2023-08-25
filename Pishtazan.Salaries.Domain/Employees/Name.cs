@@ -1,9 +1,9 @@
-﻿using System;
+﻿using Pishtazan.Salaries.Framework;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Pishtazan.Salaries.Domain.Common;
 using static Pishtazan.Salaries.Infrastructure.Validation.Validate;
 
 namespace Pishtazan.Salaries.Domain.Employees

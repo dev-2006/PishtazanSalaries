@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Pishtazan.Salaries.Domain.Common\Pishtazan.Salaries.Domain.Common.csproj" />
+    <ProjectReference Include="..\Pishtazan.Salaries.Framework\Pishtazan.Salaries.Framework.csproj" />
     <ProjectReference Include="..\Pishtazan.Salaries.Infrastructure\Pishtazan.Salaries.Infrastructure.csproj" />
   </ItemGroup>
 
