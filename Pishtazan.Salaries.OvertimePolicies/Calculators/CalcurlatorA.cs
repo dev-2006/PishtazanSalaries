@@ -10,6 +10,9 @@ namespace Pishtazan.Salaries.OvertimePolicies.Calculators
 {
     public class CalcurlatorA : IOvertimePolicyCalculator
     {
+        public const string NAME = "CalculatorA";
+        public string Name => NAME;
+
         public Salary Calculate(BasicSalary basicSalary, Allowance allowance)
         {
             ArgumentNotNull(basicSalary, nameof(basicSalary));

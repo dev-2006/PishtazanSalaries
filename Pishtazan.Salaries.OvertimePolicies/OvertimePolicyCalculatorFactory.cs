@@ -21,7 +21,7 @@ namespace Pishtazan.Salaries.OvertimePolicies
         {
             ArgumentNotNull(calculatorName, nameof(calculatorName));
 
-            throw new NotImplementedException();
+            return OvertimePolicyCalculators.Single(o => o.Name == calculatorName);
         }
     }
 }
