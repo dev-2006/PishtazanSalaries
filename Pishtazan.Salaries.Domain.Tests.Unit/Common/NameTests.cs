@@ -41,5 +41,18 @@ namespace Pishtazan.Salaries.Domain.Tests.Unit.Common
 
             Assert.IsType<ArgumentOutOfRangeException>(e);
         }
+
+        [Theory]
+        [InlineData("ali", "ali")]
+        [InlineData("ali ", "ali")]
+        [InlineData(" ali", "ali")]
+        [InlineData("  ali  ", "ali")]
+        [InlineData("  ali reza  ", "ali reza")]
+        public void Constructor_ValidNames_CreatesNameWithTrimedStringInValueProperty(string nameStr, string expectedValue)
+        {
+            var name = new Name(nameStr);
+
+            Assert.Equal(expectedValue, name.Value);
+        }
     }
 }
