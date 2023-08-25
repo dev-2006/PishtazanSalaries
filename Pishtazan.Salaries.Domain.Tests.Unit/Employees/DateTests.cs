@@ -46,5 +46,16 @@ namespace Pishtazan.Salaries.Domain.Tests.Unit.Employees
             Assert.Equal(d.Month, month);
             Assert.Equal(d.Day, day);
         }
+
+        [Theory]
+        [InlineData("14010831")]
+        [InlineData("14010832")]
+        [InlineData("14011301")]
+        [InlineData("14010001")]
+        [InlineData("14010100")]
+        public void FromString_ValidDateStrButInvalidPersianDate_ThrowsArgumentOutOfRangeException(string dateStr)
+        {
+            Assert.Throws<ArgumentOutOfRangeException>(() => Date.FromString(dateStr)); 
+        }
     }
 }
