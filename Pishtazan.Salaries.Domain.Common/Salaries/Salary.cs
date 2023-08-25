@@ -11,6 +11,7 @@ namespace Pishtazan.Salaries.Domain.Common.Salaries
     public record Salary : ValueTypeBase<long>
     {
         public const long MIN = 1;
+        public const long MAX = 9999999999;
 
         public Salary(long value) : base(value)
         {
