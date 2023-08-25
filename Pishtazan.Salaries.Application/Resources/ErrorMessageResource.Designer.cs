@@ -70,6 +70,15 @@ namespace Pishtazan.Salaries.Application.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Specified value for {0} is not valid.
+        /// </summary>
+        internal static string InvalidError {
+            get {
+                return ResourceManager.GetString("InvalidError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The minimum value of &apos;{0}&apos; is {1} and maximum value is {2}..
         /// </summary>
         internal static string RangeError {

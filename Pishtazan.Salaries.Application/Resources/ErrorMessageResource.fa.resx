@@ -120,6 +120,9 @@
   <data name="FormatError" xml:space="preserve">
     <value>فرمت {0} صحیح نمی باشد</value>
   </data>
+  <data name="InvalidError" xml:space="preserve">
+    <value>مقدار تعیین شده برای {0} معتبر نمی باشد</value>
+  </data>
   <data name="RangeError" xml:space="preserve">
     <value>حداقل مقدار {0}  {1} و حداکثر مقدار {2} است.</value>
   </data>

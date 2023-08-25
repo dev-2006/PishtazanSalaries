@@ -120,6 +120,9 @@
   <data name="FormatError" xml:space="preserve">
     <value>{0} format is not valid</value>
   </data>
+  <data name="InvalidError" xml:space="preserve">
+    <value>Specified value for {0} is not valid</value>
+  </data>
   <data name="RangeError" xml:space="preserve">
     <value>The minimum value of '{0}' is {1} and maximum value is {2}.</value>
   </data>
