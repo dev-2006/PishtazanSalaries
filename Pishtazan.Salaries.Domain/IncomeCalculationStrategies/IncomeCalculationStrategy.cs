@@ -16,7 +16,8 @@ namespace Pishtazan.Salaries.Domain.IncomeCalculationStrategies
             Validate.ArgumentNotNull(salaryDetail, nameof(salaryDetail));
             Validate.ArgumentNotNull(overtimeCalculator, nameof(overtimeCalculator));
 
-            throw new NotImplementedException();
+            return new Income(salaryDetail.BasicSalary + salaryDetail.Allowance + salaryDetail.Transportation +
+                overtimeCalculator.Calculate(salaryDetail.BasicSalary, salaryDetail.Allowance));
         }
     }
 }
