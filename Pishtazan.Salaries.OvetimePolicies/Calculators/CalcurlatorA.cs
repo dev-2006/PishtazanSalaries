@@ -14,7 +14,7 @@ namespace Pishtazan.Salaries.OvetimePolicies.Calculators
             ArgumentNullException.ThrowIfNull(basicSalary, nameof(basicSalary));
             ArgumentNullException.ThrowIfNull(allowance, nameof(allowance));
 
-            throw new NotImplementedException();
+            return basicSalary + allowance;
         }
     }
 }
