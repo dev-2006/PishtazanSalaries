@@ -130,7 +130,7 @@ namespace Pishtazan.Salaries.Domain.Tests.Unit.Employees
             Employee employee = new Employee(fullName: new FullName(new FirstName("ali"), new LastName("ahmadi")), incomes);
 
             // Act
-            var e = Record.Exception(() => employee.UpdateIncome(Date.FromString(date2), salaryDetail));
+            var e = Record.Exception(() => employee.UpdateIncome(Date.FromString(date2), salaryDetail, incomeCal, overTimeCal));
 
             // Assert
             Assert.IsType<SalaryNotFoundException>(e);
@@ -156,7 +156,7 @@ namespace Pishtazan.Salaries.Domain.Tests.Unit.Employees
             var transportation = new Transportation(4);
             SalaryDetail salaryDetail2 = new SalaryDetail(basicSalary, allowance, transportation);
             Date d2 = Date.FromString(date2);
-            employee.UpdateIncome(d2, salaryDetail2);
+            employee.UpdateIncome(d2, salaryDetail2, incomeCal, overTimeCal);
 
             // Assert
             Income expectedIncome = new Income(2 + 3 + 4 + (2 + 3));

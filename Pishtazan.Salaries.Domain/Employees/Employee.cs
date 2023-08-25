@@ -42,6 +42,11 @@ namespace Pishtazan.Salaries.Domain.Employees
             if (salaryInSameMonthExists(date))
                 throw new DuplicateSalariesInSameMonthException();
 
+            addIncome(date, salaryDetail, incomeCalculationStrategy, overTimeCalculator);
+        }
+
+        private void addIncome(Date date, SalaryDetail salaryDetail, IIncomeCalculationStrategy incomeCalculationStrategy, IOvertimePolicyCalculator overTimeCalculator)
+        {
             Income income = incomeCalculationStrategy.Calculate(salaryDetail, overTimeCalculator);
 
             _incomes.Add(new IncomeDetail(date, salaryDetail, income));
@@ -52,7 +57,8 @@ namespace Pishtazan.Salaries.Domain.Employees
             return _incomes.Any(x => x.Date.IsInSameMonthWith(date));
         }
 
-        public void UpdateIncome(Date date, SalaryDetail salaryDetail)
+        public void UpdateIncome(Date date, SalaryDetail salaryDetail, IIncomeCalculationStrategy incomeCalculationStrategy,
+            IOvertimePolicyCalculator overTimeCalculator)
         {
             ArgumentNotNull(date, nameof(date));
             ArgumentNotNull(salaryDetail, nameof(salaryDetail));
@@ -61,6 +67,10 @@ namespace Pishtazan.Salaries.Domain.Employees
 
             if (incomeInSameMonth == null)
                 throw new SalaryNotFoundException();
+
+            _incomes.Remove(incomeInSameMonth);
+
+            addIncome(date, salaryDetail, incomeCalculationStrategy, overTimeCalculator);
         }
 
         private IncomeDetail? findIncomeInSameMonthWith(Date date)
