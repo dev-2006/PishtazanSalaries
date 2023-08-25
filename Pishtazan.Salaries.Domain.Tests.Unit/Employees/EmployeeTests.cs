@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Xunit;
 
 namespace Pishtazan.Salaries.Domain.Tests.Unit.Employees
 {
@@ -56,6 +57,19 @@ namespace Pishtazan.Salaries.Domain.Tests.Unit.Employees
         {
             Assert.Throws<ArgumentNullException>(() => employee.AddIncome(date, salaryDetail, incomeCal, 
                 overTimeCalculator: null!));
+        }
+
+        [Fact]
+        public void AddIncome_WhenIncomesAreEmpty_AcceptsAnyValidIncomeDetail()
+        {
+            // Arrange
+            Employee employee = new Employee(fullName: new FullName(new FirstName("ali"), new LastName("ahmadi")));
+
+            // Act
+            employee.AddIncome(date, salaryDetail, incomeCal, overTimeCal);
+
+            // Assert
+            Assert.Equal(1, employee.Incomes.Count);
         }
     }
 }
