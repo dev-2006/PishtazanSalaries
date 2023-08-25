@@ -1,4 +1,5 @@
 ﻿using Pishtazan.Salaries.Domain.Common.Salaries;
+using Pishtazan.Salaries.Infrastructure.Validation;
 using Pishtazan.Salaries.OvertimePolicies.Calculators;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,12 @@ namespace Pishtazan.Salaries.Domain.IncomeCalculationStrategies
 {
     public class IncomeCalculationStrategy
     {
-        public Income Calculate(SalaryDetail salaryDetail, IOvertimePolicyCalculator overtimeCalculator) => throw new NotImplementedException();
+        public Income Calculate(SalaryDetail salaryDetail, IOvertimePolicyCalculator overtimeCalculator)
+        {
+            Validate.ArgumentNotNull(salaryDetail, nameof(salaryDetail));
+            Validate.ArgumentNotNull(overtimeCalculator, nameof(overtimeCalculator));
+
+            throw new NotImplementedException();
+        }
     }
 }
