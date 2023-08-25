@@ -68,5 +68,14 @@ namespace Pishtazan.Salaries.Domain.Resources {
                 return ResourceManager.GetString("DuplicateSalariesInSameMonthError", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Salary doesn&apos;t exist.
+        /// </summary>
+        internal static string SalaryNotFoundError {
+            get {
+                return ResourceManager.GetString("SalaryNotFoundError", resourceCulture);
+            }
+        }
     }
 }

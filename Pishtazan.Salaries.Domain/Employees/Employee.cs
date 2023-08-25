@@ -51,5 +51,10 @@ namespace Pishtazan.Salaries.Domain.Employees
         {
             return _incomes.Any(x => x.Date.IsInSameMonthWith(date));
         }
+
+        public void UpdateIncome(Date date, SalaryDetail salaryDetail)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

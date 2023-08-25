@@ -120,4 +120,7 @@
   <data name="DuplicateSalariesInSameMonthError" xml:space="preserve">
     <value>Only one salary can be defined per month</value>
   </data>
+  <data name="SalaryNotFoundError" xml:space="preserve">
+    <value>Salary doesn't exist</value>
+  </data>
 </root>
