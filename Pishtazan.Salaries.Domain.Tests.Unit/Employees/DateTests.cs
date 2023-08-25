@@ -32,5 +32,19 @@ namespace Pishtazan.Salaries.Domain.Tests.Unit.Employees
         {
             Assert.Throws<ArgumentOutOfRangeException>(() => Date.FromString(dateStr));
         }
+
+        [Theory]
+        [InlineData("14010801", 1401, 8, 1)]
+        [InlineData("13800129", 1380, 1, 29)]
+        [InlineData(" 14010801 ", 1401, 8, 1)]
+        [InlineData("  13800129  ", 1380, 1, 29)]
+        public void FromString_ValidDateStr_CreatesDate(string dateStr, int year, int month, int day)
+        {
+            Date d = Date.FromString(dateStr);
+
+            Assert.Equal(d.Year, year);
+            Assert.Equal(d.Month, month);
+            Assert.Equal(d.Day, day);
+        }
     }
 }

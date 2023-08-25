@@ -18,6 +18,10 @@ namespace Pishtazan.Salaries.Domain.Employees
         /// </example>
         public const int DATE_STRING_LENGTH = 8;
 
+        public int Year { get; }
+        public int Month { get; }
+        public int Day { get; }
+
         public static Date FromString(string value)
         {
             value = ArgumentNotNull(value, "date").Trim();
