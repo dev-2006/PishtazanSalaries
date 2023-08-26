@@ -95,7 +95,7 @@ namespace Pishtazan.Salaries.Application.Employees
             if (employee == null)
                 throw new EmployeeNotFoundException();
 
-            throw new NotImplementedException();
+            employee.DeleteIncome(Date.FromString(cmd.Date!));
         }
 
         private static FullName FullNameFrom(DeleteEmployeeSalary cmd)
