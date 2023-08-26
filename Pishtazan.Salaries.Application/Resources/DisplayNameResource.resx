@@ -138,6 +138,12 @@
   <data name="OverTimeCalculator" xml:space="preserve">
     <value>OverTimeCalculator</value>
   </data>
+  <data name="PageIndex" xml:space="preserve">
+    <value>Page Index</value>
+  </data>
+  <data name="PageSize" xml:space="preserve">
+    <value>Page Size</value>
+  </data>
   <data name="StartDate" xml:space="preserve">
     <value>Start Date</value>
   </data>

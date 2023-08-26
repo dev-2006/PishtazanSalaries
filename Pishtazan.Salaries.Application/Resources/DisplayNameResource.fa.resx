@@ -138,6 +138,12 @@
   <data name="OverTimeCalculator" xml:space="preserve">
     <value>نحوه محاسبه اضافه کار</value>
   </data>
+  <data name="PageIndex" xml:space="preserve">
+    <value>اندیس صفحه</value>
+  </data>
+  <data name="PageSize" xml:space="preserve">
+    <value>اندازه صفحه</value>
+  </data>
   <data name="StartDate" xml:space="preserve">
     <value>تاریخ شروع</value>
   </data>

@@ -124,6 +124,24 @@ namespace Pishtazan.Salaries.Application.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Page Index.
+        /// </summary>
+        internal static string PageIndex {
+            get {
+                return ResourceManager.GetString("PageIndex", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Page Size.
+        /// </summary>
+        internal static string PageSize {
+            get {
+                return ResourceManager.GetString("PageSize", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Start Date.
         /// </summary>
         internal static string StartDate {

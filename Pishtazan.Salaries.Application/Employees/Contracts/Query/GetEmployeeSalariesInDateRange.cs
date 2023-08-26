@@ -1,5 +1,7 @@
 ﻿using Pishtazan.Salaries.Application.Employees.ValidationAttributes;
 using Pishtazan.Salaries.Application.Resources;
+using Pishtazan.Salaries.Domain.Common.Query;
+using Pishtazan.Salaries.Domain.Common.Salaries;
 using Pishtazan.Salaries.Domain.Employees;
 using System;
 using System.Collections.Generic;
@@ -34,5 +36,17 @@ namespace Pishtazan.Salaries.Application.Employees.Contracts.Query
         [Required(ErrorMessageResourceType = typeof(ErrorMessageResource), ErrorMessageResourceName = "RequiredError")]
         [DateValidation(ErrorMessageResourceType = typeof(ErrorMessageResource), ErrorMessageResourceName = "FormatError")]
         public string? InclusiveEndtDate { get; set; }
+
+        [Display(ResourceType = typeof(DisplayNameResource), Name = "PageIndex")]
+        [Required(ErrorMessageResourceType = typeof(ErrorMessageResource), ErrorMessageResourceName = "RequiredError")]
+        [Range(maximum: PageIndex.MAX, minimum: PageIndex.MIN,
+             ErrorMessageResourceType = typeof(ErrorMessageResource), ErrorMessageResourceName = "RangeError")]
+        public int? RequestedPageIndex { get; set; }
+
+        [Display(ResourceType = typeof(DisplayNameResource), Name = "PageSize")]
+        [Required(ErrorMessageResourceType = typeof(ErrorMessageResource), ErrorMessageResourceName = "RequiredError")]
+        [Range(maximum: PageSize.MAX, minimum: PageSize.MIN,
+             ErrorMessageResourceType = typeof(ErrorMessageResource), ErrorMessageResourceName = "RangeError")]
+        public int? RequestedPageSize { get; set; }
     }
 }
