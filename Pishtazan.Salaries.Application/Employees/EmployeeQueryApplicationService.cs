@@ -19,9 +19,9 @@ namespace Pishtazan.Salaries.Application.Employees
 {
     public class EmployeeQueryApplicationService : IEmployeeQueryApplicationService
     {
-        private readonly IEmployeeReadRepository _repository;
+        private readonly IEmployeeQueryRepository _repository;
 
-        public EmployeeQueryApplicationService(IEmployeeReadRepository repository)
+        public EmployeeQueryApplicationService(IEmployeeQueryRepository repository)
         {
             _repository = ArgumentNotNull(repository, nameof(repository));
         }

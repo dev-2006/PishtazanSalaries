@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Pishtazan.Salaries.Application.Employees.Repository
 {
-    public interface IEmployeeReadRepository
+    public interface IEmployeeQueryRepository
     {
         Task<IncomeDetailDTO?> Query(FullName employeeFullName, Date date);
         Task<IEnumerable<IncomeDetailDTO>?> Query(FullName employeeFullName, DateRange dateRange, Page page);

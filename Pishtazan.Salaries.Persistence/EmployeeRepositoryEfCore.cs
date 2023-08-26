@@ -11,7 +11,7 @@ using static Pishtazan.Salaries.Infrastructure.Validation.Validate;
 
 namespace Pishtazan.Salaries.Persistence
 {
-    public class EmployeeRepositoryEfCore : IEmployeeRepository , IEmployeeReadRepository
+    public class EmployeeRepositoryEfCore : IEmployeeRepository , IEmployeeQueryRepository
     {
         private readonly ApplicationDbContext _dbContext;
 
@@ -21,7 +21,7 @@ namespace Pishtazan.Salaries.Persistence
         public Task Add(Employee employee) => Task.Run(() => _dbContext.Employees?.AddAsync(employee));
 
         public Task<Employee?> Load(FullName fullName) => 
-            _dbContext.Employees.SingleOrDefaultAsync(e => e.FullName.FirstName.Value == fullName.FirstName.Value &&
+            _dbContext.Employees?.SingleOrDefaultAsync(e => e.FullName.FirstName.Value == fullName.FirstName.Value &&
                                                       e.FullName.LastName.Value == fullName.LastName.Value);
 
         public Task SaveChanges() => _dbContext.SaveChangesAsync();

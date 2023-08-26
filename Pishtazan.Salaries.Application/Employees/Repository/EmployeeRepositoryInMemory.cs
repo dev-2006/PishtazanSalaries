@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Pishtazan.Salaries.Application.Employees.Repository
 {
-    public class EmployeeRepositoryInMemory : IEmployeeRepository, IEmployeeReadRepository
+    public class EmployeeRepositoryInMemory : IEmployeeRepository, IEmployeeQueryRepository
     {
         public List<Employee> Employees = new List<Employee>();
 

@@ -39,7 +39,7 @@ public static class ServiceCollectionExtensions
     {
         
         services.AddScoped<IEmployeeRepository, EmployeeRepositoryEfCore>();
-        services.AddScoped<IEmployeeReadRepository, EmployeeRepositoryEfCore>();
+        services.AddScoped<IEmployeeQueryRepository, EmployeeRepositoryEfCore>();
 
         services.AddSingleton<IIncomeCalculationStrategy, IncomeCalculationStrategy>();
         services.AddScoped<IApplicationService, EmployeeApplicationService>();
