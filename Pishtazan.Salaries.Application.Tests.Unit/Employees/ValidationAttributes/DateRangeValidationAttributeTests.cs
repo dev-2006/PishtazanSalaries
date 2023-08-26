@@ -10,10 +10,17 @@ namespace Pishtazan.Salaries.Application.Tests.Unit.Employees.ValidationAttribut
     public class DateRangeValidationAttributeTests
     {
         DateRangeValidationAttribute att = new DateRangeValidationAttribute();
+
         [Fact]
         public void IsValid_NullArgument_ReturnsTrueAsNullValidationMustBeCheckViaItsOwnValidations()
         {
             Assert.True(att.IsValid(null));
+        }
+
+        [Fact]
+        public void IsValid_NotGetEmployeeSalariesInDateRangeObject_ReturnsTrue()
+        {
+            Assert.True(att.IsValid(new object()));
         }
     }
 }
