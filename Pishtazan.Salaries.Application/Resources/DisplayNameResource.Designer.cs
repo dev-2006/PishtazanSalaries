@@ -88,6 +88,15 @@ namespace Pishtazan.Salaries.Application.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to End Date.
+        /// </summary>
+        internal static string EndDate {
+            get {
+                return ResourceManager.GetString("EndDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to First Name.
         /// </summary>
         internal static string FirstName {
@@ -111,6 +120,15 @@ namespace Pishtazan.Salaries.Application.Resources {
         internal static string OverTimeCalculator {
             get {
                 return ResourceManager.GetString("OverTimeCalculator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Start Date.
+        /// </summary>
+        internal static string StartDate {
+            get {
+                return ResourceManager.GetString("StartDate", resourceCulture);
             }
         }
         

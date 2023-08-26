@@ -126,6 +126,9 @@
   <data name="Date" xml:space="preserve">
     <value>تاریخ</value>
   </data>
+  <data name="EndDate" xml:space="preserve">
+    <value>تاریخ پایان</value>
+  </data>
   <data name="FirstName" xml:space="preserve">
     <value>نام</value>
   </data>
@@ -134,6 +137,9 @@
   </data>
   <data name="OverTimeCalculator" xml:space="preserve">
     <value>نحوه محاسبه اضافه کار</value>
+  </data>
+  <data name="StartDate" xml:space="preserve">
+    <value>تاریخ شروع</value>
   </data>
   <data name="Transportation" xml:space="preserve">
     <value>حق ایاب و ذهاب</value>
