@@ -8,6 +8,11 @@ namespace Pishtazan.Salaries.Application.Employees.ValidationAttributes
     {
         public override bool IsValid(object? value)
         {
+            //بررسی نال بودن و الزامی بودن باید از طریق اتریبیوت های مربوط به خود بررسی شود و این
+            //کلاس برای اینکه پیام های خطایش با آنها ترکیب نشود در این حالت ها ترو بر می گرداند
+            if (value == null)
+                return true;
+
             throw new NotImplementedException();
         }
     }
