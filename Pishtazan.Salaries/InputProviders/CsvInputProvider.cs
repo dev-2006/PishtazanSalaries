@@ -5,17 +5,11 @@ using Pishtazan.Salaries.Domain.Employees;
 
 namespace Pishtazan.Salaries.InputProviders
 {
-    public class CsvInputProvider
+    public class CsvInputProvider : SimpleInputProvider
     {
         public CsvInputProvider() { }
-
-        public EmployeeSalary Convert(string rawData) 
-        {
-            Dictionary<string, string> map = createMapOfProperties(rawData);
-            return createObjectFrom(map);
-        }
-
-        private Dictionary<string, string> createMapOfProperties(string rawData)
+        
+        protected override Dictionary<string, string> createMapOfProperties(string rawData)
         {
             string[] propertyNames = new string[] { "FirstName", "LastName", "BasicSalary", "Allowance", "Transportation", "Date" };
             string[] propertyValues = rawData.Split(new string[] { "," }, StringSplitOptions.RemoveEmptyEntries);
@@ -26,13 +20,6 @@ namespace Pishtazan.Salaries.InputProviders
                 map.Add(propertyNames[i], propertyValues[i]);
 
             return map;
-        }
-
-        private EmployeeSalary createObjectFrom(Dictionary<string, string> map)
-        {
-            string json = JsonConvert.SerializeObject(map);
-
-            return JsonConvert.DeserializeObject<EmployeeSalary>(json)!;
         }
     }
 }
