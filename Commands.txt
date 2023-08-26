@@ -1,0 +1,7 @@
+docker build -f Pishtazan.Salaries\Dockerfile -t web_api  .
+
+cd Pishtazan.Salaries
+
+docker-compose up
+
+http://localhost:5000/swagger/index.html
