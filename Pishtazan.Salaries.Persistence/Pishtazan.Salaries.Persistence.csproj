@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Pishtazan.Salaries.Application\Pishtazan.Salaries.Application.csproj" />
     <ProjectReference Include="..\Pishtazan.Salaries.Domain\Pishtazan.Salaries.Domain.csproj" />
   </ItemGroup>
 

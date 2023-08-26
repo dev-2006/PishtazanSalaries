@@ -37,9 +37,9 @@ public static class ServiceCollectionExtensions
 
     public static IServiceCollection AddAndConfigApplicationServices(this IServiceCollection services)
     {
-        EmployeeRepositoryInMemory repository = new EmployeeRepositoryInMemory();
-        services.AddSingleton<IEmployeeRepository>(repository);
-        services.AddSingleton<IEmployeeReadRepository>(repository);
+        
+        services.AddScoped<IEmployeeRepository, EmployeeRepositoryEfCore>();
+        services.AddScoped<IEmployeeReadRepository, EmployeeRepositoryEfCore>();
 
         services.AddSingleton<IIncomeCalculationStrategy, IncomeCalculationStrategy>();
         services.AddScoped<IApplicationService, EmployeeApplicationService>();

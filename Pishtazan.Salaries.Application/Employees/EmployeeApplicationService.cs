@@ -84,6 +84,8 @@ namespace Pishtazan.Salaries.Application.Employees
 
             employee.UpdateIncome(DateFrom(cmd), SalaryDetailFrom(cmd), _incomeCalculation,
                 _overtimePolicyFactory.Get(cmd.OverTimeCalculator!));
+
+            await _repository.SaveChanges();
         }
 
         private async Task deleteSalary(DeleteEmployeeSalary cmd)
@@ -96,6 +98,8 @@ namespace Pishtazan.Salaries.Application.Employees
                 throw new EmployeeNotFoundException();
 
             employee.DeleteIncome(Date.FromString(cmd.Date!));
+
+            await _repository.SaveChanges();
         }
 
         private static FullName FullNameFrom(DeleteEmployeeSalary cmd)

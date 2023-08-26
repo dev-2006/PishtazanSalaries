@@ -13,6 +13,7 @@ namespace Pishtazan.Salaries.Persistence
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
+            Database.Migrate();
         }
 
         public DbSet<Employee>? Employees { get; set; }
