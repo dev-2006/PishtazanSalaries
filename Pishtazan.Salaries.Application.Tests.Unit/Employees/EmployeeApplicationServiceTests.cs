@@ -134,5 +134,22 @@ namespace Pishtazan.Salaries.Application.Tests.Unit.Employees
             Assert.Equal(repository.Employees[0].Incomes.First().Date, EmployeeRepositoryBuilder.NOT_EXIST_SALARY_DATE_SAME_MONTH);
             Assert.Equal(repository.Employees[0].Incomes.First().SalaryDetails.BasicSalary, new BasicSalary(11));
         }
+
+        [Fact]
+        public async void HandleDeleteSalaryCommand_WhenEmployeeDoesnotExist_EmployeeNotFoundException()
+        {
+            EmployeeRepositoryInMemory repository = EmployeeRepositoryBuilder.CreateRepositoryWithOneEmployeeAndOneSalary();
+
+            EmployeeApplicationService service = new EmployeeApplicationService(repository, incomeCalculation, overtimePolicyFactory);
+
+            var e = await Record.ExceptionAsync(() => service.Handle(new DeleteEmployeeSalary
+            {
+                FirstName = EmployeeRepositoryBuilder.NOT_EXIST_EMP_FN,
+                LastName = EmployeeRepositoryBuilder.NOT_EXIST_EMP_LN,
+                Date = EmployeeRepositoryBuilder.EXIST_SALARY_DATE_STR,
+            }));
+
+            Assert.IsType<EmployeeNotFoundException>(e);
+        }
     }
 }
