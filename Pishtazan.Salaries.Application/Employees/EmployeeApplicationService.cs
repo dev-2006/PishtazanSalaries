@@ -1,4 +1,5 @@
 ﻿using Pishtazan.Salaries.Application.Employees.Contracts.Command;
+using Pishtazan.Salaries.Application.Employees.Exceptions;
 using Pishtazan.Salaries.Application.Employees.Repository;
 using Pishtazan.Salaries.Domain.Common.Salaries;
 using Pishtazan.Salaries.Domain.Employees;
@@ -32,6 +33,7 @@ namespace Pishtazan.Salaries.Application.Employees
             command switch
             {
                 CreateEmployeeSalary cmd => createSalary(cmd),
+                UpdateEmployeeSalary cmd => updateSalary(cmd),
 
                 _ => throw new InvalidOperationException("undefined command")
             };
@@ -68,6 +70,18 @@ namespace Pishtazan.Salaries.Application.Employees
         {
             return new SalaryDetail(new BasicSalary(cmd.BasicSalary!.Value), new Allowance(cmd.Allowance!.Value), 
                 new Transportation(cmd.Transportation!.Value));
+        }
+
+        private async Task updateSalary(UpdateEmployeeSalary cmd)
+        {
+            FullName fullName = FullNameFrom(cmd);
+
+            var employee = await _repository.Load(fullName);
+
+            if (employee == null)
+                throw new EmployeeNotFoundException();
+
+            throw new NotImplementedException();
         }
     }
 
