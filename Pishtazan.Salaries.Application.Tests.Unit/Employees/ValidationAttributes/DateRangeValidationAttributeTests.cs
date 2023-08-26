@@ -72,6 +72,14 @@ namespace Pishtazan.Salaries.Application.Tests.Unit.Employees.ValidationAttribut
             }));
         }
 
-
+        [Fact]
+        public void IsValid_GetEmployeeSalariesInDateRangeObjectWithValidAndIncorrectDates_ReturnsFalse()
+        {
+            Assert.False(att.IsValid(new GetEmployeeSalariesInDateRange()
+            {
+                InclusiveStartDate = "14020229",
+                InclusiveEndtDate = "14020105"
+            }));
+        }
     }
 }
