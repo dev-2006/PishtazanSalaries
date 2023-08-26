@@ -168,5 +168,23 @@ namespace Pishtazan.Salaries.Application.Tests.Unit.Employees
 
             Assert.IsType<SalaryNotFoundInSpecifiedDateException>(e);
         }
+
+        [Fact]
+        public async void HandleDeleteSalaryCommand_WhenEmployeeExistsAndSalaryInExactDateExists_RemovesSalaryFromImployeeIncomes()
+        {
+            EmployeeRepositoryInMemory repository = EmployeeRepositoryBuilder.CreateRepositoryWithOneEmployeeAndOneSalary();
+
+            EmployeeApplicationService service = new EmployeeApplicationService(repository, incomeCalculation, overtimePolicyFactory);
+
+            await service.Handle(new DeleteEmployeeSalary
+            {
+                FirstName = EmployeeRepositoryBuilder.EXIST_EMP_FN,
+                LastName = EmployeeRepositoryBuilder.EXIST_EMP_LN,
+                Date = EmployeeRepositoryBuilder.EXIST_SALARY_DATE_STR,
+            });
+
+            Assert.Single(repository.Employees);
+            Assert.Empty(repository.Employees[0].Incomes);
+        }
     }
 }
