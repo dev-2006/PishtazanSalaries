@@ -1,6 +1,7 @@
 ﻿using Pishtazan.Salaries.Application.Employees;
 using Pishtazan.Salaries.Application.Employees.Contracts.Command;
 using Pishtazan.Salaries.Application.Employees.Exceptions;
+using Pishtazan.Salaries.Application.Employees.Repository;
 using Pishtazan.Salaries.Application.Employees.ValidationAttributes;
 using Pishtazan.Salaries.Domain.Common.Salaries;
 using Pishtazan.Salaries.Domain.Employees;

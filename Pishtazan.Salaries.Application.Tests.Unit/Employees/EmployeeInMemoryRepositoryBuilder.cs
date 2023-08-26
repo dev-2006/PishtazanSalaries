@@ -1,4 +1,5 @@
 ﻿using Pishtazan.Salaries.Application.Employees;
+using Pishtazan.Salaries.Application.Employees.Repository;
 using Pishtazan.Salaries.Domain.Common.Salaries;
 using Pishtazan.Salaries.Domain.Employees;
 using System;

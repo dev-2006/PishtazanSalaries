@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Pishtazan.Salaries.Application.Tests.Unit.Employees
+namespace Pishtazan.Salaries.Application.Employees.Repository
 {
     public class EmployeeRepositoryInMemory : IEmployeeRepository
     {
