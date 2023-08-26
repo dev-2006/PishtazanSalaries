@@ -21,7 +21,7 @@ namespace Pishtazan.Salaries.Application.Employees.Repository
                 else
                 {
                     PersianCalendar pc = new PersianCalendar();
-                    DateTime dt = DateTime.Parse(value!);
+                    DateTime dt = DateTime.ParseExact(value!, "MM/dd/yyyy HH:mm:ss", CultureInfo.InvariantCulture);
                     _date = pc.GetYear(dt) + "/" + pc.GetMonth(dt) + "/" + pc.GetDayOfMonth(dt);
                 }
             }
