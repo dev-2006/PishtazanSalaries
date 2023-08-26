@@ -5,7 +5,7 @@ using Pishtazan.Salaries.Domain.Employees;
 
 namespace Pishtazan.Salaries.Application.Employees
 {
-    public interface IEmployeeReadApplicationService
+    public interface IEmployeeQueryApplicationService
     {
         Task<IncomeDetailDTO?> Query(GetEmployeeSalaryInExactDate query);
         Task<IEnumerable<IncomeDetailDTO>?> Query(GetEmployeeSalariesInDateRange query);

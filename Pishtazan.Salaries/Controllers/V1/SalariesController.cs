@@ -13,11 +13,11 @@ namespace Pishtazan.Salaries.Controllers.V1
     public class SalariesController : ControllerBase
     {
         private readonly IApplicationService _applicationService;
-        private readonly IEmployeeReadApplicationService _queryApi;
+        private readonly IEmployeeQueryApplicationService _queryApi;
         private readonly ILogger<SalariesController> _logger;
 
         public SalariesController(IApplicationService applicationService, 
-            IEmployeeReadApplicationService queryApi, ILogger<SalariesController> logger)
+            IEmployeeQueryApplicationService queryApi, ILogger<SalariesController> logger)
         {
             _applicationService = applicationService;
             _queryApi = queryApi;

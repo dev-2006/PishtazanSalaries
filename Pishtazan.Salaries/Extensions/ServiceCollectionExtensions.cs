@@ -41,7 +41,7 @@ public static class ServiceCollectionExtensions
 
         services.AddSingleton<IIncomeCalculationStrategy, IncomeCalculationStrategy>();
         services.AddScoped<IApplicationService, EmployeeApplicationService>();
-        services.AddScoped<IEmployeeReadApplicationService, EmployeeReadApplicationService>();
+        services.AddScoped<IEmployeeQueryApplicationService, EmployeeQueryApplicationService>();
 
         return services;
     }

@@ -17,11 +17,11 @@ using static Pishtazan.Salaries.Infrastructure.Validation.Validate;
 
 namespace Pishtazan.Salaries.Application.Employees
 {
-    public class EmployeeReadApplicationService : IEmployeeReadApplicationService
+    public class EmployeeQueryApplicationService : IEmployeeQueryApplicationService
     {
         private readonly IEmployeeReadRepository _repository;
 
-        public EmployeeReadApplicationService(IEmployeeReadRepository repository)
+        public EmployeeQueryApplicationService(IEmployeeReadRepository repository)
         {
             _repository = ArgumentNotNull(repository, nameof(repository));
         }
