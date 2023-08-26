@@ -103,4 +103,15 @@ public static class ServiceCollectionExtensions
 
         return builder;
     }
+
+    public static WebApplication CreateAndMigrateDataBaseIfNotExists(this WebApplication app)
+    {
+        using (var scope = app.Services.CreateScope())
+        {
+            var salesContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+            salesContext.Database.Migrate();
+        }
+
+        return app;
+    }
 }

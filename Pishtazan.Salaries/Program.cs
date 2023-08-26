@@ -17,6 +17,8 @@ builder.AddAndConfigPersistence();
 
 var app = builder.Build();
 
+app.CreateAndMigrateDataBaseIfNotExists();
+
 app.UseApiExceptionHandling();
 app.UseRequestLocalization();
 
