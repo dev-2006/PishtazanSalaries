@@ -3,7 +3,7 @@ using Pishtazan.Salaries.Application.Employees.Contracts.Command;
 
 namespace Pishtazan.Salaries.InputProviders
 {
-    public abstract class SimpleInputProvider
+    public abstract class SimpleInputProvider : IInputProvider
     {
         public EmployeeSalary Convert(string rawData)
         {
