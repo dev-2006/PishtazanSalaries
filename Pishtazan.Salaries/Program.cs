@@ -1,3 +1,5 @@
+using Microsoft.AspNetCore.Mvc.Versioning;
+using Microsoft.AspNetCore.Mvc;
 using Pishtazan.Salaries.Application.Employees.ValidationAttributes;
 using Pishtazan.Salaries.Extensions;
 using Pishtazan.Salaries.OvertimePolicies.Calculators.Factory;
@@ -6,6 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
+builder.Services.AddAndConfigVersioning();
 builder.Services.AddControllers().AddDataAnnotationsLocalization();
 builder.Services.AddAndConfigLocalization();
 builder.Services.AddAndConfigSwagger();

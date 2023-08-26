@@ -11,6 +11,8 @@ using System.Net.Http;
 using System.Reflection;
 using Pishtazan.Salaries.Application.Employees.ValidationAttributes;
 using Pishtazan.Salaries.OvertimePolicies.Calculators.Factory;
+using Microsoft.AspNetCore.Mvc.Versioning;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Pishtazan.Salaries.Extensions;
 
@@ -45,8 +47,28 @@ public static class ServiceCollectionExtensions
     {
         services.AddSwaggerGen(options =>
         {
-            options.OperationFilter<SwaggerLanguageHeader>();  
+            options.OperationFilter<SwaggerLanguageHeader>();
+
+            var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+            var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+            options.IncludeXmlComments(xmlPath);
         });
+
+        return services;
+    }
+
+    public static IServiceCollection AddAndConfigVersioning(this IServiceCollection services)
+    {
+        services.AddApiVersioning(options => {
+            options.ApiVersionReader = new UrlSegmentApiVersionReader();
+            options.AssumeDefaultVersionWhenUnspecified = true;
+            options.DefaultApiVersion = new ApiVersion(1, 0);
+        });
+        services.AddVersionedApiExplorer(options => {
+            options.GroupNameFormat = "'v'VVV";
+            options.SubstituteApiVersionInUrl = true;
+        });
+        services.AddEndpointsApiExplorer();
 
         return services;
     }
