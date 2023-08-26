@@ -81,7 +81,8 @@ namespace Pishtazan.Salaries.Application.Employees
             if (employee == null)
                 throw new EmployeeNotFoundException();
 
-            throw new NotImplementedException();
+            employee.UpdateIncome(DateFrom(cmd), SalaryDetailFrom(cmd), _incomeCalculation,
+                _overtimePolicyFactory.Get(cmd.OverTimeCalculator!));
         }
     }
 
