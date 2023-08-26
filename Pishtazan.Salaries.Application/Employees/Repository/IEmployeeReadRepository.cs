@@ -11,7 +11,7 @@ namespace Pishtazan.Salaries.Application.Employees.Repository
 {
     internal interface IEmployeeReadRepository
     {
-        Task<Employee?> Query(FullName employeeFullName, Date date);
-        Task<IEnumerable<Employee>?> Query(FullName employeeFullName, DateRange dateRange, Page page);
+        Task<IncomeDetailDTO?> Query(FullName employeeFullName, Date date);
+        Task<IEnumerable<IncomeDetailDTO>?> Query(FullName employeeFullName, DateRange dateRange, Page page);
     }
 }
