@@ -113,5 +113,26 @@ namespace Pishtazan.Salaries.Application.Tests.Unit.Employees
 
             Assert.IsType<SalaryInSameMonthNotFoundException>(e);
         }
+
+        [Fact]
+        public async void HandleUpdateSalaryCommand_WhenEmployeeExistsAndSalaryInSameMonthExists_ReplacesSalary()
+        {
+            EmployeeRepositoryInMemory repository = EmployeeRepositoryBuilder.CreateRepositoryWithOneEmployeeAndOneSalary();
+
+            EmployeeApplicationService service = new EmployeeApplicationService(repository, incomeCalculation, overtimePolicyFactory);
+
+            await service.Handle(new UpdateEmployeeSalary(new EmployeeSalary
+            {
+                FirstName = EmployeeRepositoryBuilder.EXIST_EMP_FN,
+                LastName = EmployeeRepositoryBuilder.EXIST_EMP_LN,
+                Date = EmployeeRepositoryBuilder.NOT_EXIST_SALARY_DATE_SAME_MONTH_STR,
+                BasicSalary = 11, Allowance = 21, Transportation = 31, OverTimeCalculator = OVER_TIME_CALCULATOR
+            }));
+
+            Assert.Single(repository.Employees);
+            Assert.Single(repository.Employees[0].Incomes);
+            Assert.Equal(repository.Employees[0].Incomes.First().Date, EmployeeRepositoryBuilder.NOT_EXIST_SALARY_DATE_SAME_MONTH);
+            Assert.Equal(repository.Employees[0].Incomes.First().SalaryDetails.BasicSalary, new BasicSalary(11));
+        }
     }
 }
