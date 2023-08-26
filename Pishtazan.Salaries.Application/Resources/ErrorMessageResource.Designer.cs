@@ -61,6 +61,15 @@ namespace Pishtazan.Salaries.Application.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to End date must be greater than start date.
+        /// </summary>
+        internal static string DataRangeError {
+            get {
+                return ResourceManager.GetString("DataRangeError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Specified employee doesn&apos;t exist.
         /// </summary>
         internal static string EmployeeNotFoundError {

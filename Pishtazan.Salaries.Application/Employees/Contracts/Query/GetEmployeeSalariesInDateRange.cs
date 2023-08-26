@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace Pishtazan.Salaries.Application.Employees.Contracts.Query
 {
-    [DateRangeValidation]
+    [DateRangeValidation(ErrorMessageResourceType = typeof(ErrorMessageResource), ErrorMessageResourceName = "DataRangeError")]
     public class GetEmployeeSalariesInDateRange
     {
         [Display(ResourceType = typeof(DisplayNameResource), Name = "FirstName")]
