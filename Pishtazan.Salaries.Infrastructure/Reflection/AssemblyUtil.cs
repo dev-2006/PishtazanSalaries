@@ -28,7 +28,7 @@ namespace Pishtazan.Salaries.Infrastructure.Reflection
 
         public static Type[] LoadTypes<T>(Assembly assembly)
         {
-            return assembly.GetTypes().Where(t => t.IsAssignableTo(typeof(T)) && t.IsClass).ToArray();
+            return assembly.GetTypes().Where(t => t.IsAssignableTo(typeof(T)) && t.IsClass && !t.IsAbstract).ToArray();
         }
     }
 }

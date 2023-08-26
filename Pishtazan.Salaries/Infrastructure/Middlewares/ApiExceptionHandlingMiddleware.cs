@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Pishtazan.Salaries.Controllers.V1;
 using Pishtazan.Salaries.Framework;
 using System;
 using System.Collections.Generic;
@@ -60,6 +61,10 @@ namespace Pishtazan.Salaries.Infrastructure.Middlewares
                 };
                 context.Response.StatusCode = (int)HttpStatusCode.BadRequest;
                 result = JsonSerializer.Serialize(problemDetails);
+            }
+            else if(ex is CustomValidationException ve)
+            {
+                result = JsonSerializer.Serialize(ve.ValidationProblemDetails);
             }
             else
             {

@@ -20,6 +20,7 @@ using Pishtazan.Salaries.Domain.IncomeCalculationStrategies;
 using Pishtazan.Salaries.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Pishtazan.Salaries.Persistence.DapperQuery;
+using Pishtazan.Salaries.InputProviders.Factory;
 
 namespace Pishtazan.Salaries.Extensions;
 
@@ -37,14 +38,15 @@ public static class ServiceCollectionExtensions
     }
 
     public static IServiceCollection AddAndConfigApplicationServices(this IServiceCollection services)
-    {
-        
+    {        
         services.AddScoped<IEmployeeRepository, EmployeeRepositoryEfCore>();
         services.AddScoped<IEmployeeQueryRepository, EmployeeQueryRepositoryDapper>();
 
         services.AddSingleton<IIncomeCalculationStrategy, IncomeCalculationStrategy>();
         services.AddScoped<IApplicationService, EmployeeApplicationService>();
         services.AddScoped<IEmployeeQueryApplicationService, EmployeeQueryApplicationService>();
+
+        services.AddSingleton<IInputDataProviderFactory, InputDataProviderFactory>();
 
         return services;
     }

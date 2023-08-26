@@ -123,6 +123,9 @@
   <data name="BasicSalary" xml:space="preserve">
     <value>BasicSalary</value>
   </data>
+  <data name="Data" xml:space="preserve">
+    <value>Data</value>
+  </data>
   <data name="Date" xml:space="preserve">
     <value>Date</value>
   </data>

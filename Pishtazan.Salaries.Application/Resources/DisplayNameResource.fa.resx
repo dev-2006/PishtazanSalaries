@@ -123,6 +123,9 @@
   <data name="BasicSalary" xml:space="preserve">
     <value>حقوق پایه</value>
   </data>
+  <data name="Data" xml:space="preserve">
+    <value>داده</value>
+  </data>
   <data name="Date" xml:space="preserve">
     <value>تاریخ</value>
   </data>
