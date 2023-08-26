@@ -61,5 +61,17 @@ namespace Pishtazan.Salaries.Application.Tests.Unit.Employees.ValidationAttribut
         {
             Assert.True(att.IsValid(new GetEmployeeSalariesInDateRange() { InclusiveEndtDate = dateStr }));
         }
+
+        [Fact]
+        public void IsValid_GetEmployeeSalariesInDateRangeObjectWithValidAndInOrderDates_ReturnsTrue()
+        {
+            Assert.True(att.IsValid(new GetEmployeeSalariesInDateRange() 
+            {
+                InclusiveStartDate = "14020229",
+                InclusiveEndtDate = "14020301" 
+            }));
+        }
+
+
     }
 }
