@@ -1,4 +1,5 @@
-﻿using Pishtazan.Salaries.Application.Employees.ValidationAttributes;
+﻿using Pishtazan.Salaries.Application.Employees.Contracts.Query;
+using Pishtazan.Salaries.Application.Employees.ValidationAttributes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,6 +22,12 @@ namespace Pishtazan.Salaries.Application.Tests.Unit.Employees.ValidationAttribut
         public void IsValid_NotGetEmployeeSalariesInDateRangeObject_ReturnsTrue()
         {
             Assert.True(att.IsValid(new object()));
+        }
+
+        [Fact]
+        public void IsValid_GetEmployeeSalariesInDateRangeObjectWithNullStartDate_ReturnsTrue()
+        {
+            Assert.True(att.IsValid(new GetEmployeeSalariesInDateRange() { InclusiveStartDate = null}));
         }
     }
 }
