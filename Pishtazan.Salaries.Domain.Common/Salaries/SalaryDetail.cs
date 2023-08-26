@@ -13,6 +13,9 @@ namespace Pishtazan.Salaries.Domain.Common.Salaries
         public Allowance Allowance { get; private set; }
         public Transportation Transportation { get; private set; }
 
+        #pragma warning disable CS8618
+        private SalaryDetail() { }
+
         public SalaryDetail(BasicSalary basicSalary, Allowance allowance, Transportation transportation)
         {
             BasicSalary = Validate.ArgumentNotNull(basicSalary, nameof(basicSalary));

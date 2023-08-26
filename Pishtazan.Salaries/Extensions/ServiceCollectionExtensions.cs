@@ -17,6 +17,8 @@ using Pishtazan.Salaries.Application.Employees.Repository;
 using Pishtazan.Salaries.Application.Employees;
 using Pishtazan.Salaries.Application;
 using Pishtazan.Salaries.Domain.IncomeCalculationStrategies;
+using Pishtazan.Salaries.Persistence;
+using Microsoft.EntityFrameworkCore;
 
 namespace Pishtazan.Salaries.Extensions;
 
@@ -89,5 +91,13 @@ public static class ServiceCollectionExtensions
         services.AddEndpointsApiExplorer();
 
         return services;
+    }
+
+    public static WebApplicationBuilder AddAndConfigPersistence(this WebApplicationBuilder builder)
+    {
+        var connection = builder.Configuration.GetConnectionString("DefaultConnection");
+        builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(connection));
+
+        return builder;
     }
 }

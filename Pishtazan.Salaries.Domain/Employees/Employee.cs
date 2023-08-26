@@ -19,6 +19,9 @@ namespace Pishtazan.Salaries.Domain.Employees
 
         public FullName FullName { get; private set; }
 
+#pragma warning disable CS8618
+        private Employee() { }
+
         public Employee(FullName fullName)
         {
             FullName = ArgumentNotNull(fullName, nameof(fullName));

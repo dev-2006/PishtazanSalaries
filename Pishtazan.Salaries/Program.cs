@@ -13,6 +13,7 @@ builder.Services.AddAndConfigLocalization();
 builder.Services.AddAndConfigSwagger();
 builder.Services.AddAndConfigOvertimePolicies();
 builder.Services.AddAndConfigApplicationServices();
+builder.AddAndConfigPersistence();
 
 var app = builder.Build();
 

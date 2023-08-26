@@ -14,6 +14,9 @@ namespace Pishtazan.Salaries.Domain.Employees
         public SalaryDetail SalaryDetails { get; private set; }
         public Income Income { get; private set; }
 
+#pragma warning disable CS8618
+        private IncomeDetail() { }
+
         public IncomeDetail(Date date, SalaryDetail salaryDetails, Income income)
         {
             Date = ArgumentNotNull(date, nameof(date));
