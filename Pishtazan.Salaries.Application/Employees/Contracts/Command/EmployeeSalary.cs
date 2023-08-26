@@ -71,6 +71,7 @@ namespace Pishtazan.Salaries.Application.Employees.Contracts.Command
             BasicSalary = other.BasicSalary;
             Allowance = other.Allowance;
             Transportation = other.Transportation;
+            OverTimeCalculator = other.OverTimeCalculator;
         }
     }
 }
