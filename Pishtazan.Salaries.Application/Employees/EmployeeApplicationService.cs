@@ -28,9 +28,46 @@ namespace Pishtazan.Salaries.Application.Employees
             _overtimePolicyFactory = Validate.ArgumentNotNull(overtimePolicyFactory, nameof(overtimePolicyFactory));
         }
 
-        public Task Handle(object command)
+        public Task Handle(object command) =>
+            command switch
+            {
+                CreateEmployeeSalary cmd => createSalary(cmd),
+
+                _ => throw new InvalidOperationException("undefined command")
+            };
+
+        private async Task createSalary(CreateEmployeeSalary cmd)
         {
-            throw new NotImplementedException();
+            FullName fullName = FullNameFrom(cmd);
+
+            var employee = await _repository.Load(fullName);
+
+            if (employee == null)
+            {
+                employee = new Employee(fullName);
+                await _repository.Add(employee);
+            }
+
+            employee.AddIncome(DateFrom(cmd), SalaryDetailFrom(cmd), _incomeCalculation,
+                _overtimePolicyFactory.Get(cmd.OverTimeCalculator!));
+
+            await _repository.SaveChanges();
+        }
+
+        private static FullName FullNameFrom(EmployeeSalary cmd)
+        {
+            return new FullName(new FirstName(cmd.FirstName!), new LastName(cmd.LastName!));
+        }
+
+        private static Date DateFrom(EmployeeSalary cmd)
+        {
+            return Date.FromString(cmd.Date!);
+        }
+
+        private static SalaryDetail SalaryDetailFrom(EmployeeSalary cmd)
+        {
+            return new SalaryDetail(new BasicSalary(cmd.BasicSalary!.Value), new Allowance(cmd.Allowance!.Value), 
+                new Transportation(cmd.Transportation!.Value));
         }
     }
 
