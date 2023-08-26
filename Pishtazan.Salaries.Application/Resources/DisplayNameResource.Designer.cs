@@ -22,7 +22,7 @@ namespace Pishtazan.Salaries.Application.Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class DisplayNameResource {
+    public class DisplayNameResource {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace Pishtazan.Salaries.Application.Resources {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Pishtazan.Salaries.Application.Resources.DisplayNameResource", typeof(DisplayNameResource).Assembly);
@@ -51,7 +51,7 @@ namespace Pishtazan.Salaries.Application.Resources {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace Pishtazan.Salaries.Application.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Allowance.
         /// </summary>
-        internal static string Allowance {
+        public static string Allowance {
             get {
                 return ResourceManager.GetString("Allowance", resourceCulture);
             }
@@ -72,7 +72,7 @@ namespace Pishtazan.Salaries.Application.Resources {
         /// <summary>
         ///   Looks up a localized string similar to BasicSalary.
         /// </summary>
-        internal static string BasicSalary {
+        public static string BasicSalary {
             get {
                 return ResourceManager.GetString("BasicSalary", resourceCulture);
             }
@@ -81,7 +81,7 @@ namespace Pishtazan.Salaries.Application.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Date.
         /// </summary>
-        internal static string Date {
+        public static string Date {
             get {
                 return ResourceManager.GetString("Date", resourceCulture);
             }
@@ -90,7 +90,7 @@ namespace Pishtazan.Salaries.Application.Resources {
         /// <summary>
         ///   Looks up a localized string similar to End Date.
         /// </summary>
-        internal static string EndDate {
+        public static string EndDate {
             get {
                 return ResourceManager.GetString("EndDate", resourceCulture);
             }
@@ -99,7 +99,7 @@ namespace Pishtazan.Salaries.Application.Resources {
         /// <summary>
         ///   Looks up a localized string similar to First Name.
         /// </summary>
-        internal static string FirstName {
+        public static string FirstName {
             get {
                 return ResourceManager.GetString("FirstName", resourceCulture);
             }
@@ -108,7 +108,7 @@ namespace Pishtazan.Salaries.Application.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Last Name.
         /// </summary>
-        internal static string LastName {
+        public static string LastName {
             get {
                 return ResourceManager.GetString("LastName", resourceCulture);
             }
@@ -117,7 +117,7 @@ namespace Pishtazan.Salaries.Application.Resources {
         /// <summary>
         ///   Looks up a localized string similar to OverTimeCalculator.
         /// </summary>
-        internal static string OverTimeCalculator {
+        public static string OverTimeCalculator {
             get {
                 return ResourceManager.GetString("OverTimeCalculator", resourceCulture);
             }
@@ -126,7 +126,7 @@ namespace Pishtazan.Salaries.Application.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Page Index.
         /// </summary>
-        internal static string PageIndex {
+        public static string PageIndex {
             get {
                 return ResourceManager.GetString("PageIndex", resourceCulture);
             }
@@ -135,7 +135,7 @@ namespace Pishtazan.Salaries.Application.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Page Size.
         /// </summary>
-        internal static string PageSize {
+        public static string PageSize {
             get {
                 return ResourceManager.GetString("PageSize", resourceCulture);
             }
@@ -144,7 +144,7 @@ namespace Pishtazan.Salaries.Application.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Start Date.
         /// </summary>
-        internal static string StartDate {
+        public static string StartDate {
             get {
                 return ResourceManager.GetString("StartDate", resourceCulture);
             }
@@ -153,7 +153,7 @@ namespace Pishtazan.Salaries.Application.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Transportation.
         /// </summary>
-        internal static string Transportation {
+        public static string Transportation {
             get {
                 return ResourceManager.GetString("Transportation", resourceCulture);
             }

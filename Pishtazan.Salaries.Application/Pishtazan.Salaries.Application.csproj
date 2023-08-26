@@ -36,18 +36,18 @@
   <ItemGroup>
     <EmbeddedResource Update="Resources\DisplayNameResource.fa.resx">
       <LastGenOutput>DisplayNameResource.fa.Designer.cs</LastGenOutput>
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Resources\ErrorMessageResource.fa.resx">
       <LastGenOutput>ErrorMessageResource.fa.Designer.cs</LastGenOutput>
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Resources\ErrorMessageResource.resx">
       <LastGenOutput>ErrorMessageResource.Designer.cs</LastGenOutput>
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Resources\DisplayNameResource.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>DisplayNameResource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>

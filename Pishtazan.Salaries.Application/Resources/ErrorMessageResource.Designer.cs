@@ -22,7 +22,7 @@ namespace Pishtazan.Salaries.Application.Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class ErrorMessageResource {
+    public class ErrorMessageResource {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace Pishtazan.Salaries.Application.Resources {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Pishtazan.Salaries.Application.Resources.ErrorMessageResource", typeof(ErrorMessageResource).Assembly);
@@ -51,7 +51,7 @@ namespace Pishtazan.Salaries.Application.Resources {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace Pishtazan.Salaries.Application.Resources {
         /// <summary>
         ///   Looks up a localized string similar to End date must be greater than start date.
         /// </summary>
-        internal static string DataRangeError {
+        public static string DataRangeError {
             get {
                 return ResourceManager.GetString("DataRangeError", resourceCulture);
             }
@@ -72,7 +72,7 @@ namespace Pishtazan.Salaries.Application.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Specified employee doesn&apos;t exist.
         /// </summary>
-        internal static string EmployeeNotFoundError {
+        public static string EmployeeNotFoundError {
             get {
                 return ResourceManager.GetString("EmployeeNotFoundError", resourceCulture);
             }
@@ -81,7 +81,7 @@ namespace Pishtazan.Salaries.Application.Resources {
         /// <summary>
         ///   Looks up a localized string similar to {0} format is not valid.
         /// </summary>
-        internal static string FormatError {
+        public static string FormatError {
             get {
                 return ResourceManager.GetString("FormatError", resourceCulture);
             }
@@ -90,7 +90,7 @@ namespace Pishtazan.Salaries.Application.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Specified value for {0} is not valid.
         /// </summary>
-        internal static string InvalidError {
+        public static string InvalidError {
             get {
                 return ResourceManager.GetString("InvalidError", resourceCulture);
             }
@@ -99,7 +99,7 @@ namespace Pishtazan.Salaries.Application.Resources {
         /// <summary>
         ///   Looks up a localized string similar to The minimum value of &apos;{0}&apos; is {1} and maximum value is {2}..
         /// </summary>
-        internal static string RangeError {
+        public static string RangeError {
             get {
                 return ResourceManager.GetString("RangeError", resourceCulture);
             }
@@ -108,7 +108,7 @@ namespace Pishtazan.Salaries.Application.Resources {
         /// <summary>
         ///   Looks up a localized string similar to {0} is required..
         /// </summary>
-        internal static string RequiredError {
+        public static string RequiredError {
             get {
                 return ResourceManager.GetString("RequiredError", resourceCulture);
             }
@@ -117,7 +117,7 @@ namespace Pishtazan.Salaries.Application.Resources {
         /// <summary>
         ///   Looks up a localized string similar to The minimum length of &apos;{0}&apos; is {2} characters and maximum length is {1} characters..
         /// </summary>
-        internal static string StringLengthError {
+        public static string StringLengthError {
             get {
                 return ResourceManager.GetString("StringLengthError", resourceCulture);
             }
