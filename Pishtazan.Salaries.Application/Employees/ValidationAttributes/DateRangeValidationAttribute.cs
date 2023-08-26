@@ -16,6 +16,20 @@ namespace Pishtazan.Salaries.Application.Employees.ValidationAttributes
             if (value is not GetEmployeeSalariesInDateRange)
                 return true;
 
+            GetEmployeeSalariesInDateRange query = (GetEmployeeSalariesInDateRange)value;
+
+            Date start, end;
+            try
+            {
+                start = Date.FromString(query.InclusiveStartDate!);
+                end = Date.FromString(query.InclusiveEndtDate!);
+            }
+            catch
+            {
+                return true;//این اتریبیوت بر روی کل کلاس عمل می کند و تنها زمانیکه مقادیر خام درست باشند بررسی می کند
+                            //تا پیام هایش با سایر اتریبیوت ها ترکیب نشود
+            }
+
             throw new NotImplementedException();
         }
     }
