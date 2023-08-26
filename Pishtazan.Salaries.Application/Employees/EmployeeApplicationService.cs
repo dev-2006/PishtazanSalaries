@@ -34,6 +34,7 @@ namespace Pishtazan.Salaries.Application.Employees
             {
                 CreateEmployeeSalary cmd => createSalary(cmd),
                 UpdateEmployeeSalary cmd => updateSalary(cmd),
+                DeleteEmployeeSalary cmd => deleteSalary(cmd),
 
                 _ => throw new InvalidOperationException("undefined command")
             };
@@ -83,6 +84,23 @@ namespace Pishtazan.Salaries.Application.Employees
 
             employee.UpdateIncome(DateFrom(cmd), SalaryDetailFrom(cmd), _incomeCalculation,
                 _overtimePolicyFactory.Get(cmd.OverTimeCalculator!));
+        }
+
+        private async Task deleteSalary(DeleteEmployeeSalary cmd)
+        {
+            FullName fullName = FullNameFrom(cmd);
+
+            var employee = await _repository.Load(fullName);
+
+            if (employee == null)
+                throw new EmployeeNotFoundException();
+
+            throw new NotImplementedException();
+        }
+
+        private static FullName FullNameFrom(DeleteEmployeeSalary cmd)
+        {
+            return new FullName(new FirstName(cmd.FirstName!), new LastName(cmd.LastName!));
         }
     }
 
