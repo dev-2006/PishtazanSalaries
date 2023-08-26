@@ -8,6 +8,11 @@ namespace Pishtazan.Salaries.Application.Employees.Contracts.Command
 {
     public class CreateEmployeeSalary : EmployeeSalary
     {
+        public CreateEmployeeSalary()
+        {
+
+        }
+
         public CreateEmployeeSalary(EmployeeSalary source) : base(source)
         {
         }

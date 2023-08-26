@@ -13,6 +13,10 @@ using Pishtazan.Salaries.Application.Employees.ValidationAttributes;
 using Pishtazan.Salaries.OvertimePolicies.Calculators.Factory;
 using Microsoft.AspNetCore.Mvc.Versioning;
 using Microsoft.AspNetCore.Mvc;
+using Pishtazan.Salaries.Application.Employees.Repository;
+using Pishtazan.Salaries.Application.Employees;
+using Pishtazan.Salaries.Application;
+using Pishtazan.Salaries.Domain.IncomeCalculationStrategies;
 
 namespace Pishtazan.Salaries.Extensions;
 
@@ -28,6 +32,20 @@ public static class ServiceCollectionExtensions
 
         return services;
     }
+
+    public static IServiceCollection AddAndConfigApplicationServices(this IServiceCollection services)
+    {
+        EmployeeRepositoryInMemory repository = new EmployeeRepositoryInMemory();
+        services.AddSingleton<IEmployeeRepository>(repository);
+        services.AddSingleton<IEmployeeReadRepository>(repository);
+
+        services.AddSingleton<IIncomeCalculationStrategy, IncomeCalculationStrategy>();
+        services.AddScoped<IApplicationService, EmployeeApplicationService>();
+        services.AddScoped<IEmployeeReadApplicationService, EmployeeReadApplicationService>();
+
+        return services;
+    }
+
     public static IServiceCollection AddAndConfigLocalization(this IServiceCollection services)
     {
         services.AddLocalization(options => options.ResourcesPath = "Resources");
