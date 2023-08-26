@@ -13,6 +13,9 @@ namespace Pishtazan.Salaries.Application.Employees.ValidationAttributes
             if (value == null)
                 return true;
 
+            if (value is not GetEmployeeSalariesInDateRange)
+                return true;
+
             throw new NotImplementedException();
         }
     }
