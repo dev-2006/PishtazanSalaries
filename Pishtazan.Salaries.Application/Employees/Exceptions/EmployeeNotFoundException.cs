@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Pishtazan.Salaries.Application.Employees.Exceptions
 {
-    public class EmployeeNotFoundException : DomainException
+    public class EmployeeNotFoundException : NotFoundDomainException
     {
         public EmployeeNotFoundException() : base(ErrorMessageResource.EmployeeNotFoundError)
         {
