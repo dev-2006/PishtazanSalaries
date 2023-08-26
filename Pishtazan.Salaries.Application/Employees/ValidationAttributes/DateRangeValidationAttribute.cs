@@ -30,7 +30,10 @@ namespace Pishtazan.Salaries.Application.Employees.ValidationAttributes
                             //تا پیام هایش با سایر اتریبیوت ها ترکیب نشود
             }
 
-            throw new NotImplementedException();
+            if (start.GregorianDate > end.GregorianDate)
+                return false;
+
+            return true;
         }
     }
 }
