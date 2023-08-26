@@ -1,5 +1,6 @@
 ﻿using Pishtazan.Salaries.Application.Employees;
 using Pishtazan.Salaries.Application.Employees.Contracts.Command;
+using Pishtazan.Salaries.Application.Employees.Exceptions;
 using Pishtazan.Salaries.Application.Employees.ValidationAttributes;
 using Pishtazan.Salaries.Domain.Common.Salaries;
 using Pishtazan.Salaries.Domain.Employees;
@@ -75,6 +76,24 @@ namespace Pishtazan.Salaries.Application.Tests.Unit.Employees
             })));
 
             Assert.IsType<DuplicateSalariesInSameMonthException>(e);
+        }
+
+        [Fact]
+        public async void HandleUpdateSalaryCommand_WhenEmployeeDoesnotExist_ThrowsEmployeeNotFoundException()
+        {
+            EmployeeRepositoryInMemory repository = EmployeeRepositoryBuilder.CreateRepositoryWithOneEmployeeAndOneSalary();
+
+            EmployeeApplicationService service = new EmployeeApplicationService(repository, incomeCalculation, overtimePolicyFactory);
+
+            var e = await Record.ExceptionAsync(() => service.Handle(new UpdateEmployeeSalary(new EmployeeSalary
+            {
+                FirstName = EmployeeRepositoryBuilder.NOT_EXIST_EMP_FN,
+                LastName = EmployeeRepositoryBuilder.NOT_EXIST_EMP_LN,
+                Date = EmployeeRepositoryBuilder.EXIST_SALARY_DATE_STR,
+                BasicSalary = 1, Allowance = 2, Transportation = 3, OverTimeCalculator = OVER_TIME_CALCULATOR
+            })));
+
+            Assert.IsType<EmployeeNotFoundException>(e);
         }
     }
 }

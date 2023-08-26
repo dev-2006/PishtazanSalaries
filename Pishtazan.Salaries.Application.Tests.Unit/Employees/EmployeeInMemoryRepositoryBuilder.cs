@@ -16,6 +16,9 @@ namespace Pishtazan.Salaries.Application.Tests.Unit.Employees
         internal static readonly FullName EXIST_EMP_FULL_NAME = new FullName(new FirstName(EXIST_EMP_FN), 
             new LastName(EXIST_EMP_LN));
 
+        internal static readonly string NOT_EXIST_EMP_FN = "hasan";
+        internal static readonly string NOT_EXIST_EMP_LN = "hasani";
+
         internal static readonly string EXIST_SALARY_DATE_STR = "14020305";
         internal static readonly Date EXIST_SALARY_DATE = Date.FromString(EXIST_SALARY_DATE_STR);
 

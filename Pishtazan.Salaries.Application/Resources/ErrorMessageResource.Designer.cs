@@ -61,6 +61,15 @@ namespace Pishtazan.Salaries.Application.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Specified employee doesn&apos;t exist.
+        /// </summary>
+        internal static string EmployeeNotFoundError {
+            get {
+                return ResourceManager.GetString("EmployeeNotFoundError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to {0} format is not valid.
         /// </summary>
         internal static string FormatError {
