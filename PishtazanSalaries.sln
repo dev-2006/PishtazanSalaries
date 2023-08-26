@@ -27,7 +27,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pishtazan.Salaries.Applicat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pishtazan.Salaries.Application.Tests.Unit", "Pishtazan.Salaries.Application.Tests.Unit\Pishtazan.Salaries.Application.Tests.Unit.csproj", "{A43B1974-FF20-4753-BB0D-024D355E111A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pishtazan.Salaries.Persistence", "Pishtazan.Salaries.Persistence\Pishtazan.Salaries.Persistence.csproj", "{A090D9CA-B99B-4D37-B48F-A7DDDC488C56}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pishtazan.Salaries.Persistence", "Pishtazan.Salaries.Persistence\Pishtazan.Salaries.Persistence.csproj", "{A090D9CA-B99B-4D37-B48F-A7DDDC488C56}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pishtazan.Salaries.Tests.Unit", "Pishtazan.Salaries.Tests.Unit\Pishtazan.Salaries.Tests.Unit.csproj", "{B20B5F3A-CD72-4F48-B2CA-A7AA748D54FB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +89,10 @@ Global
 		{A090D9CA-B99B-4D37-B48F-A7DDDC488C56}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A090D9CA-B99B-4D37-B48F-A7DDDC488C56}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A090D9CA-B99B-4D37-B48F-A7DDDC488C56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B20B5F3A-CD72-4F48-B2CA-A7AA748D54FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B20B5F3A-CD72-4F48-B2CA-A7AA748D54FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B20B5F3A-CD72-4F48-B2CA-A7AA748D54FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B20B5F3A-CD72-4F48-B2CA-A7AA748D54FB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
