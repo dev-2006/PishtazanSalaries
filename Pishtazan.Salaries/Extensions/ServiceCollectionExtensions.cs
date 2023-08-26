@@ -109,7 +109,14 @@ public static class ServiceCollectionExtensions
         using (var scope = app.Services.CreateScope())
         {
             var salesContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
-            salesContext.Database.Migrate();
+            try
+            {
+                salesContext.Database.Migrate();
+            }
+            catch
+            {
+
+            }
         }
 
         return app;
