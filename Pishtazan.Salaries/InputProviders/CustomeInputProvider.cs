@@ -5,6 +5,9 @@ namespace Pishtazan.Salaries.InputProviders
 {
     public class CustomeInputProvider : SimpleInputProvider
     {
+        public const string NAME = "Custom";
+        public override string Name => NAME;
+
         public CustomeInputProvider()
         {
 

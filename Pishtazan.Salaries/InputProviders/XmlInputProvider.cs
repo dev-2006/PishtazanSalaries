@@ -7,6 +7,9 @@ namespace Pishtazan.Salaries.InputProviders
 {
     public class XmlInputProvider : IInputProvider
     {
+        public const string NAME = "Xml";
+        public string Name => NAME;
+
         public EmployeeSalary Convert(string rawData)
         {
             XmlSerializer serializer = new XmlSerializer(typeof(EmployeeSalary));

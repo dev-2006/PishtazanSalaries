@@ -5,6 +5,8 @@ namespace Pishtazan.Salaries.InputProviders
 {
     public abstract class SimpleInputProvider : IInputProvider
     {
+        public abstract string Name { get; }
+
         public EmployeeSalary Convert(string rawData)
         {
             Dictionary<string, string> map = createMapOfProperties(rawData);

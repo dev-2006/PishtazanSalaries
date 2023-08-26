@@ -7,6 +7,9 @@ namespace Pishtazan.Salaries.InputProviders
 {
     public class CsvInputProvider : SimpleInputProvider
     {
+        public const string NAME = "Csv";
+        public override string Name => NAME;
+
         public CsvInputProvider() { }
         
         protected override Dictionary<string, string> createMapOfProperties(string rawData)

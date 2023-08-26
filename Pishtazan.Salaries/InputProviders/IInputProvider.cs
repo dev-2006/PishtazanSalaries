@@ -5,5 +5,7 @@ namespace Pishtazan.Salaries.InputProviders
     public interface IInputProvider
     {
         EmployeeSalary Convert(string rawData);
+
+        string Name { get; }
     }
 }
